@@ -1,0 +1,118 @@
+:root {
+    --background-color: antiquewhite;
+    --main-color: red;
+    --border-color: blue;
+    --sub-color: green;
+    --text-color: grey;
+
+    --erase-color: orange;
+}
+
+/* all */
+* {
+    font-family: sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+
+/* body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;        
+}
+
+/* header */
+    /* WIPO SEQUENCE SOCKS */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 50px 50px 0 0;
+    background-color: var(--background-color);
+}
+
+/* main */
+main {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 1fr;
+    width: 100%;
+    border-inline: 1px solid var(--sub-color);
+    margin: 0 auto;
+    align-content: start;
+    padding: 20px;
+}
+
+.description {
+    display: grid;
+    margin: 0 auto;
+    max-width: 50%;
+    align-content: start;
+    gap: 10px;
+}
+
+    /* HOW TO USE*/
+.description_title {
+    border: 1px solid var(--erase-color);
+    text-align: center;
+    height: 40px;    
+}
+    /* 1 2 3 4 5 */
+.description_detail {
+    color: var(--text-color);
+}
+
+    /* DOWNLOAD UPLOAD*/
+.files {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 0 auto;
+    gap: 10px;    
+}
+
+.files_item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(1);
+    border: 1px solid var(--erase-color);
+    padding: 20px;    
+    gap: 10px;
+    
+}
+
+.attach {
+    display: none;
+}
+
+.button {
+max-width: 300px;
+    padding: 12px 24px;
+    max-height: 50px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+footer {
+    text-align: center;
+    height: 40px;
+    background-color: var(--main-color);
+}
+

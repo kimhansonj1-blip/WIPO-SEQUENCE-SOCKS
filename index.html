@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>WIPO SEQUENCE SOCKS</title>      
+        <!-- css 파일 명 따라가기 -->
+        <link rel="stylesheet" href="WIPO_CSS.css">        
+    </head>
+    <body>
+        <header>
+            <h1 class="title">WIPO SEQUENCE SOCKS</h1>
+        </header>
+        <main>
+            <div class="files">
+                <div class="files_item download">
+                    <p>DOWNLOAD TEMPLATE</p>
+                    <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="button">DOWNLOAD!</a>
+                </div>
+
+                <form id="uploadForm">
+                    <div class="files_item upload">
+                        <p>UPLOAD FILE</p>
+                        <label class="button" for="button_upload">
+                            UPLOAD!                                
+                        </label>
+                        <input type="file" accept=".xlsx" class="file_item attach" id="button_upload">
+                        
+                        <button type="submit" class="button" style="margin-top:10px;">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script>
+            // 1. 뒤에 '/upload' 경로를 반드시 추가하세요.
+            const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
+
+            const fileInput = document.getElementById('button_upload');
+            const form = document.getElementById('uploadForm');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                if (fileInput.files.length === 0) {
+                    alert("엑셀 파일을 먼저 선택해주세요.");
+                    return;
+                }
+
+                // 수정: 버튼 찾기 로직 강화
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = "변환 중...";
+
+                const formData = new FormData();
+                formData.append('excel_file', fileInput.files[0]);
+
+                try {
+                    const response = await fetch(RENDER_API_URL, {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        const blob = await response.blob();
+                        const downloadUrl = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = downloadUrl;
+                        a.download = `WIPO_Sequence_${new Date().getTime()}.xml`;
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        alert("변환이 완료되었습니다!");
+                    } else {
+                        const errorText = await response.text();
+                        alert(`서버 오류: ${errorText}`);
+                    }
+                } catch (error) {
+                    console.error("전송 에러:", error);
+                    alert("서버에 연결할 수 없습니다. Render 서버가 잠자기(Sleep) 모드일 수 있으니 1분 후 다시 시도해보세요.");
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "SUBMIT";
+                }
+            });
+        </script>    
+</html>

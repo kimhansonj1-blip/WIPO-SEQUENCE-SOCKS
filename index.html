@@ -4,13 +4,30 @@
         <meta charset="UTF-8">
         <title>WIPO SEQUENCE SOCKS</title>      
         <!-- css 파일 명 따라가기 -->
+        <link rel="icon" type="image/ico" href="socks.ico">
         <link rel="stylesheet" href="WIPO_CSS.css">        
     </head>
     <body>
-        <header>
+        <header>            
             <h1 class="title">WIPO SEQUENCE SOCKS</h1>
         </header>
         <main>
+            <div class="description">
+                <div style="text-align: center;">HOW TO USE</div>
+                <ul>
+                    <li>1. Push DOWNLOAD! to get Template.xlsx</li>                    <li></li>
+                    <li>2. Complete the template file (see examples)</li>
+                    <li>3. Push UPLOAD! and select the written file</li>
+                    <li>(It might take about 30 sec ~ 1 min)</li>
+                    <li>4. Push SUBMIT to get converted .xml file</li>
+                    <li>5. Open WIPO Squence program and Click 'IMPORT SEQUENCE LISTING'</li>
+                    <li>6. Click Upload and select the converted .xml file</li>
+                    <li>7. Fill out the Project Name and Push 'Import'</li>
+                    <li>8. Done!</li>
+                </ul>
+
+
+            </div>
             <div class="files">
                 <div class="files_item download">
                     <p>DOWNLOAD TEMPLATE</p>
@@ -30,7 +47,15 @@
                 </form>
             </div>
         </main>
-
+        <div class="disclaimer">
+            <p>This program is provided solely for user convenience. It is designed to streamline workflows and enhance accessibility without compromising user environment integrity.</p>
+            <p>We strictly adhere to a "No-Data Retention" policy. This program does not collect, store, or reuse any user data. All processing occurs locally or is transient, ensuring that your information remains entirely under your control.
+</p>
+            <p>Limitation of Liability: The creator (KangPil Kim) shall not be held liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use this software. Users assume all responsibility and risk associated with the operation of this program.</p>
+        </div>
+    <footer>
+        <p>Copyright © 2026 KangPil Kim. All rights reserved.</p>
+    </footer>
         <script>
             // 1. 뒤에 '/upload' 경로를 반드시 추가하세요.
             const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';

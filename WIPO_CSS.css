@@ -1,11 +1,10 @@
 :root {
     --background-color: #1A1A1A;
     --main-color: #6BC4E8;
-    --border-color: blue;
-    --sub-color: #81D3D9;
-    --text-color: rgb(228, 228, 228);
+    --sub-color: blue;
+    --text-color: rgb(5, 0, 137);
+    --text-sub-color: rgb(228, 228, 228);
     --border-color: rgb(47, 241, 255);
-    --erase-color: orange;
 }
 
 /* all */
@@ -41,7 +40,7 @@ header {
 
     height: 100px;
 
-    color: var(--text-color);
+    color: var(--text-sub-color);
     background-color: var(--background-color);
 }
 
@@ -51,7 +50,6 @@ main {
     flex: 1;
     grid-template-columns: 1fr;
     width: 100%;
-    border-inline: 1px solid var(--sub-color);
     margin: 0 auto;
     align-content: start;
     padding: 20px;
@@ -67,33 +65,37 @@ main {
 
     /* HOW TO USE*/
 .description_title {
-    border: 1px solid var(--erase-color);
     text-align: center;
-    height: 40px;    
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: #6BC4E8;
+    padding: 10px;    
 }
     /* 1 2 3 4 5 */
 .description_detail {
-    color: var(--text-color);
+    color: black;
+}
+
+.description_color {
+    color: var(--main-color);
 }
 
     /* DOWNLOAD UPLOAD*/
 .files {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 50px 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    margin: 30px;
     gap: 10px;    
 }
 
 .files_item {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    place-items: center;
     text-align: center;
     grid-template-columns: repeat(1);
-    border: 1px solid var(--erase-color);
     padding: 20px;    
-    gap: 10px;
-    
+    gap: 10px;    
 }
 
 .attach {
@@ -101,19 +103,30 @@ main {
 }
 
 .button {
-max-width: 300px;
+    min-width: 300px;
     padding: 12px 24px;
-    max-height: 50px;
+    min-height: 50px;
     border-radius: 8px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
     text-align: center;
     background-color: var(--main-color);
 }
 
+.button:hover {
+    opacity: 80%;
+}
+
+.button_submit {
+    background-color: var(--sub-color);
+    color: white;
+}
+
 .disclaimer {
     font-size: 10px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -124,7 +137,7 @@ footer {
     height: 80px;
 
     box-sizing: border-box;
-    color: var(--text-color);
+    color: var(--text-sub-color);
     background-color: black;
 }
 

@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>WIPO SEQUENCE SOCKS</title>      
-        <!-- css 파일 명 따라가기 -->
         <link rel="icon" type="image/ico" href="socks.ico">
         <link rel="stylesheet" href="WIPO_CSS.css">        
     </head>
@@ -18,8 +17,8 @@
                     <li>1. Push DOWNLOAD! to get Template.xlsx</li>                    <li></li>
                     <li>2. Complete the template file (see examples)</li>
                     <li>3. Push UPLOAD! and select the written file</li>
-                    <li>(It might take about 30 sec ~ 1 min)</li>
                     <li>4. Push SUBMIT to get converted .xml file</li>
+                    <li>(It might take about 30 sec ~ 1 min)</li>
                     <li>5. Open WIPO Squence program and Click 'IMPORT SEQUENCE LISTING'</li>
                     <li>6. Click Upload and select the converted .xml file</li>
                     <li>7. Fill out the Project Name and Push 'Import'</li>
@@ -57,7 +56,6 @@
         <p>Copyright © 2026 KangPil Kim. All rights reserved.</p>
     </footer>
         <script>
-            // 1. 뒤에 '/upload' 경로를 반드시 추가하세요.
             const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
 
             const fileInput = document.getElementById('button_upload');
@@ -67,14 +65,13 @@
                 e.preventDefault();
 
                 if (fileInput.files.length === 0) {
-                    alert("엑셀 파일을 먼저 선택해주세요.");
+                    alert("Submit the .xslx file.");
                     return;
                 }
 
-                // 수정: 버튼 찾기 로직 강화
                 const submitBtn = form.querySelector('button[type="submit"]');
                 submitBtn.disabled = true;
-                submitBtn.textContent = "변환 중...";
+                submitBtn.textContent = "It might take some time...";
 
                 const formData = new FormData();
                 formData.append('excel_file', fileInput.files[0]);
@@ -94,10 +91,10 @@
                         document.body.appendChild(a);
                         a.click();
                         a.remove();
-                        alert("변환이 완료되었습니다!");
+                        alert("Bonne Appétit!!");
                     } else {
                         const errorText = await response.text();
-                        alert(`서버 오류: ${errorText}`);
+                        alert(`Server Error: ${errorText}`);
                     }
                 } catch (error) {
                     console.error("전송 에러:", error);

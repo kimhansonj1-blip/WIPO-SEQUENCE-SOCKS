@@ -12,36 +12,32 @@
         </header>
         <main>
             <div class="description">
-                <div style="text-align: center;">HOW TO USE</div>
+                <div class="description_title">HOW TO USE</div>
                 <ul>
-                    <li>1. Push DOWNLOAD! to get Template.xlsx</li>
-                    <li>2. Complete the template file (see examples)</li>
-                    <li>3. Push UPLOAD! and select the written file</li>
-                    <li>4. Push SUBMIT to get converted .xml file</li>
-                    <li>(It might take about 30 sec ~ 1 min)</li>
-                    <li>5. Open WIPO Squence program and Click 'IMPORT SEQUENCE LISTING'</li>
-                    <li>6. Click Upload and select the converted .xml file</li>
-                    <li>7. Fill out the Project Name and Push 'Import'</li>
-                    <li>8. Done!</li>
+                    <li class="description_detail">1. Push <span class="description_color">DOWNLOAD!</span> to get Template.xlsx</li>
+                    <li class="description_detail">2. Complete the template file (see examples)</li>
+                    <li class="description_detail">3. Push <span class="description_color">UPLOAD!</span> and select the written file</li>
+                    <li class="description_detail">4. Push <span class="description_color">SUBMIT!</span> to get converted .xml file</li>
+                    <li class="description_detail">(It might take about 30 sec ~ 1 min)</li>
+                    <li class="description_detail">5. Open WIPO Squence program and Click <span class="description_color">'IMPORT SEQUENCE LISTING'</span></li>
+                    <li class="description_detail">6. Click <span class="description_color">Upload</span> and select the converted .xml file</li>
+                    <li class="description_detail">7. Fill out the Project Name and Push <span class="description_color">'Import'</span></li>
+                    <li class="description_detail">8. Done!</li>
                 </ul>
-
-
             </div>
             <div class="files">
                 <div class="files_item download">
                     <p>DOWNLOAD TEMPLATE</p>
-                    <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="button">DOWNLOAD!</a>
+                    <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="button button_download">DOWNLOAD!</a>
                 </div>
-
                 <form id="uploadForm">
                     <div class="files_item upload">
                         <p>UPLOAD FILE</p>
-                        <label class="button" for="button_upload">
+                        <label class="button button_upload" for="button_upload_id">
                             UPLOAD!                                
                         </label>
-                        <input type="file" accept=".xlsx" class="file_item attach" id="button_upload">
-                        
-                        <button type="submit" class="button" style="margin-top:10px;">SUBMIT</button>
+                        <input type="file" accept=".xlsx" class="file_item attach" id="button_upload_id">                        
+                        <button type="submit" class="button button_submit" style="margin-top:10px;">SUBMIT!</button>
                     </div>
                 </form>
             </div>
@@ -57,7 +53,6 @@
     </footer>
         <script>
             const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
-
             const fileInput = document.getElementById('button_upload');
             const form = document.getElementById('uploadForm');
 
@@ -65,7 +60,7 @@
                 e.preventDefault();
 
                 if (fileInput.files.length === 0) {
-                    alert("Submit the .xslx file.");
+                    alert("UPLOAD the .xslx file.");
                     return;
                 }
 

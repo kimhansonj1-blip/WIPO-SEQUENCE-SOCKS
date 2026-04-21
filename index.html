@@ -1,103 +1,152 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>WIPO SEQUENCE SOCKS</title>      
-        <link rel="icon" type="image/ico" href="socks.ico">
-        <link rel="stylesheet" href="WIPO_CSS.css">        
-    </head>
-    <body>
-        <header>            
-            <h1 class="title">WIPO SEQUENCE SOCKS</h1>
-        </header>
-        <main>
-            <div class="description">
-                <div class="description_title">HOW TO USE</div>
-                <ul>
-                    <li class="description_detail">1. Push <span class="description_color">DOWNLOAD!</span> to get Template.xlsx</li>
-                    <li class="description_detail">2. Complete the template file (see examples)</li>
-                    <li class="description_detail">3. Push <span class="description_color">UPLOAD!</span> and select the written file</li>
-                    <li class="description_detail">4. Push <span class="description_color">SUBMIT!</span> to get converted .xml file</li>
-                    <li class="description_detail">(It might take about 30 sec ~ 1 min)</li>
-                    <li class="description_detail">5. Open WIPO Squence program and Click <span class="description_color">'IMPORT SEQUENCE LISTING'</span></li>
-                    <li class="description_detail">6. Click <span class="description_color">Upload</span> and select the converted .xml file</li>
-                    <li class="description_detail">7. Fill out the Project Name and Push <span class="description_color">'Import'</span></li>
-                    <li class="description_detail">8. Done!</li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/ico" href="socks.ico">
+    <link rel="stylesheet" href="WIPO_CSS.css">
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+<h1 class="title">WIPO SEQUENCE SOCKS</h1>
+        <p class="subtitle">Excel to WIPO Sequence XML Converter</p>
+    </div>
+</header>
+
+<main>
+
+    <section class="how-to-use">
+        <h2 class="section-title">How to Use</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">Click <strong>Download Template</strong> to get the Excel template</div>
             </div>
-            <div class="files">
-                <div class="files_item download">
-                    <p>DOWNLOAD TEMPLATE</p>
-                    <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="button button_download">DOWNLOAD!</a>
-                </div>
-                <form id="uploadForm">
-                    <div class="files_item upload">
-                        <p>UPLOAD FILE</p>
-                        <label class="button button_upload" for="button_upload_id">
-                            UPLOAD!                                
-                        </label>
-                        <input type="file" accept=".xlsx" class="file_item attach" id="button_upload_id">                        
-                        <button type="submit" class="button button_submit" style="margin-top:10px;">SUBMIT!</button>
-                    </div>
-                </form>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">Fill in the template file<br><em>(refer to the example rows)</em></div>
             </div>
-        </main>
-        <div class="disclaimer">
-            <p>This program is provided solely for user convenience. It is designed to streamline workflows and enhance accessibility without compromising user environment integrity.</p>
-            <p>We strictly adhere to a "No-Data Retention" policy. This program does not collect, store, or reuse any user data. All processing occurs locally or is transient, ensuring that your information remains entirely under your control.
-</p>
-            <p>Limitation of Liability: The creator (KangPil Kim) shall not be held liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use this software. Users assume all responsibility and risk associated with the operation of this program.</p>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">Click <strong>Choose File</strong> and select your completed .xlsx</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">Click <strong>Convert &amp; Download</strong> to receive the .xml file<br><em>(30 sec ~ 1 min)</em></div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">Open WIPO Sequence → click <strong>Import Sequence Listing</strong></div>
+            </div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">Click <strong>Upload</strong>, select the .xml, enter Project Name → <strong>Import</strong></div>
+            </div>
         </div>
-    <footer>
-        <p>Copyright © 2026 KangPil Kim. All rights reserved.</p>
-    </footer>
-        <script>
-            const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
-            const fileInput = document.getElementById('button_upload');
-            const form = document.getElementById('uploadForm');
+    </section>
 
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
+    <section class="actions">
 
-                if (fileInput.files.length === 0) {
-                    alert("UPLOAD the .xslx file.");
-                    return;
-                }
+        <div class="card">
+            <span class="card-badge download">Step 1</span>
+            <h3 class="card-title">Prepare XLSX</h3>
+            <p class="card-desc">Get the Excel template and fill in your sequence data following the included examples.</p>
+            <div class="card-divider"></div>
+            <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="btn btn-download">Download Template</a>
+        </div>
 
-                const submitBtn = form.querySelector('button[type="submit"]');
-                submitBtn.disabled = true;
-                submitBtn.textContent = "It might take some time...";
+        <div class="card">
+            <span class="card-badge upload">Steps 3 – 4</span>
+            <h3 class="card-title">Convert to XML</h3>
+            <p class="card-desc">Upload your completed template and receive a WIPO-compatible .xml file.<br><em>(it might take 30 sec ~ 1 min)</em></p>
+            <div class="card-divider"></div>
+            <form id="uploadForm">
+                <label class="btn btn-upload" for="fileInput">Choose File</label>
+                <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
+                <div class="file-info" id="fileInfo">No file selected</div>
+                <button type="submit" class="btn btn-submit" id="submitBtn">Convert &amp; Download</button>
+            </form>
+        </div>
 
-                const formData = new FormData();
-                formData.append('excel_file', fileInput.files[0]);
+    </section>
 
-                try {
-                    const response = await fetch(RENDER_API_URL, {
-                        method: 'POST',
-                        body: formData
-                    });
+</main>
 
-                    if (response.ok) {
-                        const blob = await response.blob();
-                        const downloadUrl = window.URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = downloadUrl;
-                        a.download = `WIPO_Sequence_${new Date().getTime()}.xml`;
-                        document.body.appendChild(a);
-                        a.click();
-                        a.remove();
-                        alert("Bonne Appétit!!");
-                    } else {
-                        const errorText = await response.text();
-                        alert(`Server Error: ${errorText}`);
-                    }
-                } catch (error) {
-                    console.error("전송 에러:", error);
-                    alert("서버에 연결할 수 없습니다. Render 서버가 잠자기(Sleep) 모드일 수 있으니 1분 후 다시 시도해보세요.");
-                } finally {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = "SUBMIT";
-                }
+<div class="disclaimer">
+    <p><strong>No Data Retention:</strong> This tool does not collect, store, or reuse any user data. All processing is transient and your information remains entirely under your control.</p>
+    <p><strong>Limitation of Liability:</strong> The creator (KangPil Kim) shall not be held liable for any direct, indirect, or consequential damages arising from use of this software. Users assume all responsibility.</p>
+</div>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
+    const fileInput = document.getElementById('fileInput');
+    const form = document.getElementById('uploadForm');
+    const fileInfo = document.getElementById('fileInfo');
+    const submitBtn = document.getElementById('submitBtn');
+
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            fileInfo.textContent = fileInput.files[0].name;
+            fileInfo.classList.add('has-file');
+        } else {
+            fileInfo.textContent = 'No file selected';
+            fileInfo.classList.remove('has-file');
+        }
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (fileInput.files.length === 0) {
+            alert('Please select an .xlsx file first.');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Converting... (please wait)';
+
+        const formData = new FormData();
+        formData.append('excel_file', fileInput.files[0]);
+
+        try {
+            const response = await fetch(RENDER_API_URL, {
+                method: 'POST',
+                body: formData
             });
-        </script>    
+
+            if (response.ok) {
+                const disposition = response.headers.get('Content-Disposition') || '';
+                const match = disposition.match(/filename="?([^";\n]+)"?/);
+                const filename = match ? match[1] : `WIPO_Sequence_${Date.now()}.xml`;
+                const blob = await response.blob();
+                const downloadUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                alert('Bonne Appétit!!');
+            } else {
+                const errorText = await response.text();
+                alert(`Server Error: ${errorText}`);
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            alert('서버에 연결할 수 없습니다. Render 서버가 잠자기(Sleep) 모드일 수 있으니 1분 후 다시 시도해보세요.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Convert & Download';
+        }
+    });
+</script>
+
+</body>
 </html>

@@ -1,0 +1,35 @@
+웹사이트를 검색 엔진에 효과적으로 노출시키면서도, 무분별한 AI 데이터 학습 봇이나 불필요한 크롤러로부터 서버 자원을 보호하고 싶으시군요. 특히 변리사님의 서비스처럼 전문적인 툴을 제공하는 사이트라면, 검색 결과에는 잘 노출되되 소스 코드가 무단으로 긁히는 것은 경계해야 합니다.
+
+가장 권장하는 robots.txt 구성안은 다음과 같습니다.
+
+1. 검색 노출용 봇만 허용하는 설정 (권장)
+구글(Google), 네이버(Naver), 빙(Bing) 등 주요 검색 엔진의 봇은 허용하고, 그 외 출처가 불분명하거나 공격적인 봇은 차단하는 방식입니다.
+
+Plaintext
+User-agent: Googlebot
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://wiposequencesocks.com/sitemap.xml

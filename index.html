@@ -8,16 +8,15 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wiposequencesocks.com">    
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    
     <meta property="og:title" content="WIPO SEQUENCE SOCKS - Excel to XML">
     <meta property="og:description" content="WIPO Sequence ST.26 XML Converter for Patent Attorneys.">
-    <meta property="og:image" type="image/ico" href="/socks.ico">
+    <meta property="og:image" type="image/ico" href="/logo.png">
     <meta property="og:url" content="https://wiposequencesocks.com">
     <meta property="og:type" content="website">
     
     <title>WIPO SEQUENCE SOCKS</title>
-    <link rel="icon" type="image/ico" href="/socks.ico">
-    <link rel="stylesheet" href="WIPO_CSS.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681"
      crossorigin="anonymous">
     </script>
@@ -84,7 +83,8 @@
             <h3 class="card-title">Prepare XLSX</h3>
             <p class="card-desc">Get the Excel template and fill in your sequence data following the included examples.</p>
             <div class="card-divider"></div>
-            <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="btn btn-download">Download Template</a>
+            <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="btn btn-download">Download Template (KOR)</a>
+            <a href="WIPO_SEQUENCE_TEMPLATE.xlsx" download class="btn btn-download">Download Template (ENG)</a>
         </div>
 
         <div class="card">
@@ -96,7 +96,7 @@
                 <label class="btn btn-upload" for="fileInput">Choose File</label>
                 <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
                 <div class="file-info" id="fileInfo">No file selected</div>
-                <button type="submit" class="btn btn-submit" id="submitBtn">Convert &amp; Download</button>
+                <button type="submit" class="btn btn-submit" id="submitBtn"><span class="btn-spinner"></span><span id="submitBtnText">Convert &amp; Download</span></button>
             </form>
         </div>
 
@@ -139,7 +139,7 @@
         }
 
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Converting... (please wait)';
+        document.getElementById('submitBtnText').textContent = 'Converting... (please wait)';
 
         const formData = new FormData();
         formData.append('excel_file', fileInput.files[0]);
@@ -162,17 +162,17 @@
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
-                alert('Bonne Appétit!!');
+                alert('Bonne Appétit !');
             } else {
                 const errorText = await response.text();
                 alert(`Server Error: ${errorText}`);
             }
         } catch (error) {
             console.error('Upload error:', error);
-            alert('Cannott connect to the server. Please try later.');
+            alert('Cannot connect to the server. Please try later.');
         } finally {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Convert & Download';
+            document.getElementById('submitBtnText').textContent = 'Convert & Download';
         }
     });
 </script>

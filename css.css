@@ -188,6 +188,14 @@ main {
     min-height: calc(1.5em * 3);
 }
 
+.card-report {
+    grid-column: 1 / -1;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+
 /* ── Form ── */
 form {
     display: flex;

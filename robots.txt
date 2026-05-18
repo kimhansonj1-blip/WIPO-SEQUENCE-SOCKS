@@ -1,0 +1,28 @@
+Plaintext
+User-agent: Googlebot
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://wiposequencesocks.com/sitemap.xml

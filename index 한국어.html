@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easily convert 1,000+ sequences to ST.26 compliant XML with just one click.">
+    <meta name="keywords" content="wiposequence, wipo sequence, WIPO sequence converter, ST.26 XML, sequence listing, patent sequence, WIPO ST.26, sequence XML converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com">    
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:title" content="WIPO SEQUENCE SOCKS - Excel to XML">
+    <meta property="og:description" content="WIPO Sequence ST.26 XML Converter for Patent Attorneys.">
+    <meta property="og:image" type="image/ico" href="/logo.png">
+    <meta property="og:url" content="https://wiposequencesocks.com">
+    <meta property="og:type" content="website">
+    
+    <link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko"/>
+    <link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/en"/>
+    <link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/"/>
+    
+    <title>WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681"
+     crossorigin="anonymous">
+    </script>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "WIPO SEQUENCE SOCKS",
+        "alternateName": ["WIPO SEQUENCE SOCKS", "WIPO Sequence Converter"],
+        "url": "https://wiposequencesocks.com",
+        "description": "WipoSequence: Excel to WIPO Sequence ST.26 XML converter for patent attorneys.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://wiposequencesocks.com"
+        }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">WIPO SEQUENCE SOCKS</h1>
+        <p class="subtitle">엑셀 파일로 WIPO SEQUENCE에 서열을 입력하는 도구</p>
+        <p class="language"><a href="">한국어</a> | <a href="">ENGLISH</a></p>
+    </div>
+</header>
+
+<main>
+
+    <section class="how-to-use">
+        <h2 class="section-title">사용 방법</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content"><strong>템플릿 다운로드</strong>을 클릭하여 엑셀 템플릿 파일을 받으세요.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">엑셀 템플릿 파일 내 서열정보를 작성하세요.<br><em>(예시 참조)</em></div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content"><strong>파일 선택</strong>을 클릭하여 작성한 엑셀 파일을 첨부하세요.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content"><strong>변환</strong>을 클릭하여 XML 형식의 파일을 받으세요.<br><em>(30초 ~ 1분 소요)</em></div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content"> WIPO Sequence 프로그램을 열어<strong> Import Sequence Listing</strong>를 클릭하세요.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content"><strong>Upload</strong>를 클릭하여 조금 전 받은 xml 파일을 첨부 및 Project Name 작성 → <strong>Import</strong>를 클릭하세요.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="actions">
+
+        <div class="card">
+            <span class="card-badge download">1단계</span>
+            <h3 class="card-title">엑셀 파일 준비</h3>
+            <p class="card-desc">엑셀 템플릿 파일을 받은 후 파일 내 서열정보를 작성하세요.</p>
+            <div class="card-divider"></div>
+            <a href="WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">다운로드 (한국어)</a>
+            <a href="WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">다운로드 (영어)</a>
+        </div>
+
+        <div class="card">
+            <span class="card-badge upload">3, 4단계</span>
+            <h3 class="card-title">XML 파일로 변환</h3>
+            <p class="card-desc">작성한 엑셀 파일을 XML 형식의 파일로 변환하세요.<br><em>(30초 ~ 1분 소요될 수 있음)</em></p>
+            <div class="card-divider"></div>
+            <form id="uploadForm">
+                <label class="btn btn-upload" for="fileInput">파일 선택</label>
+                <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
+                <div class="file-info" id="fileInfo">파일이 선택되지 않았습니다.</div>
+                <button type="submit" class="btn btn-submit" id="submitBtn"><span class="btn-spinner"></span><span id="submitBtnText">변환</span></button>
+            </form>
+        </div>
+        <div class="card card-report">
+            <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">에러 보고</a>
+        </div>
+    </section>
+
+</main>
+
+<div class="disclaimer">
+    <p><strong>데이터 저장 방침:</strong> 본 도구는 어떠한 사용자 데이터도 수집, 저장 또는 재사용하지 않습니다. 모든 처리는 일시적이며, 사용자의 정보는 전적으로 사용자의 통제 하에 있습니다.</p>
+    <p><strong>법적 책임:</strong> 제작자(김강필)는 본 소프트웨어 사용으로 인해 발생하는 어떠한 직간접적 또는 결과적 손해에 대해서도 책임을 지지 않습니다. 사용자는 모든 책임을 스스로 부담합니다.</p>
+</div>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
+    const fileInput = document.getElementById('fileInput');
+    const form = document.getElementById('uploadForm');
+    const fileInfo = document.getElementById('fileInfo');
+    const submitBtn = document.getElementById('submitBtn');
+
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            fileInfo.textContent = fileInput.files[0].name;
+            fileInfo.classList.add('has-file');
+        } else {
+            fileInfo.textContent = 'No file selected';
+            fileInfo.classList.remove('has-file');
+        }
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (fileInput.files.length === 0) {
+            alert('엑셀 파일을 첨부해주세요.');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        document.getElementById('submitBtnText').textContent = '변환중...';
+
+        const formData = new FormData();
+        formData.append('excel_file', fileInput.files[0]);
+
+        try {
+            const response = await fetch(RENDER_API_URL, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const disposition = response.headers.get('Content-Disposition') || '';
+                const match = disposition.match(/filename="?([^";\n]+)"?/);
+                const filename = match ? match[1] : `WIPO_Sequence_${Date.now()}.xml`;
+                const blob = await response.blob();
+                const downloadUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                alert('변환 완료 !');
+            } else {
+                const errorText = await response.text();
+                alert(`Server Error: ${errorText}`);
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            alert('서버에 연결할 수 없습니다. 잠시 후 다시 시도해주세요.');
+        } finally {
+            submitBtn.disabled = false;
+            document.getElementById('submitBtnText').textContent = '변환';
+        }
+    });
+</script>
+
+</body>
+</html>

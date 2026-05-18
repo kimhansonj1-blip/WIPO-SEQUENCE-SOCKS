@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 1. 루트 메인 페이지 (기본/기타 언어용) -->
+  <url>
+    <loc>https://wiposequencesocks.com/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/" />
+  </url>
+
+  <!-- 2. 한국어(ko) 페이지 -->
+  <url>
+    <loc>https://wiposequencesocks.com/ko/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/" />
+  </url>
+
+  <!-- 3. 영어(en) 페이지 -->
+  <url>
+    <loc>https://wiposequencesocks.com/en/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/" />
+  </url>
+
+</urlset>

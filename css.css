@@ -67,11 +67,47 @@ header {
     font-weight: 400;
 }
 
-.language {
+/* ── Language Switcher ── */
+.lang-switcher {
     position: absolute;
-    font-size: 0.8rem;
     top: 0;
     right: 0;
+    display: flex;
+    gap: 6px;
+}
+
+.lang-btn {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #94A3B8;
+    border: 1px solid #334155;
+    transition: all 0.15s;
+}
+
+.lang-btn:hover {
+    color: white;
+    border-color: var(--header-accent);
+}
+
+.lang-active {
+    color: var(--header-bg);
+    background: var(--header-accent);
+    border-color: var(--header-accent);
+}
+
+.lang-active:hover {
+    color: var(--header-bg);
+}
+
+/* ── Hero ── */
+.hero-text {
+    margin-top: 14px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.02em;
 }
 
 /* ── Main ── */
@@ -83,67 +119,7 @@ main {
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-}
-
-.section-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border);
-}
-
-/* ── Steps ── */
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 10px;
-    align-items: stretch;
-}
-
-.step {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: white;
-    border-radius: 10px;
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-.step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 28px;
-    height: 28px;
-    background: var(--accent);
-    color: white;
-    font-weight: 700;
-    font-size: 0.82rem;
-    border-radius: 50%;
-    flex-shrink: 0;
-    align-self: center;
-}
-
-.step-content {
-    font-size: 0.88rem;
-    color: var(--text);
-    line-height: 1.55;
-    padding-top: 4px;
-}
-
-.step-content strong {
-    color: var(--accent);
-}
-
-.step-content em {
-    color: var(--text-muted);
-    font-style: normal;
-    font-size: 0.81rem;
+    gap: 24px;
 }
 
 /* ── Action Cards ── */
@@ -164,8 +140,6 @@ main {
     align-items: center;
     text-align: center;
     gap: 10px;
-
-    justify-content: flex-start;
 }
 
 .card-badge {
@@ -195,13 +169,29 @@ main {
     min-height: calc(1.5em * 2);
 }
 
-.card-report {
-    grid-column: 1 / -1;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text);
+.convert-status {
+    font-size: 0.82rem;
+    font-weight: 600;
+    min-height: 1.2em;
 }
 
+.convert-status.converting {
+    color: var(--accent);
+}
+
+.convert-status.success {
+    color: var(--green);
+}
+
+.convert-status.error {
+    color: #EF4444;
+}
+
+.btn-upload.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
 
 /* ── Form ── */
 form {
@@ -245,6 +235,9 @@ form {
 .btn-upload {
     background: var(--accent);
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-upload:hover {
@@ -295,27 +288,7 @@ form {
 
 .file-hidden { display: none; }
 
-.file-info {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    width: 100%;
-    padding: 5px 10px;
-    background: var(--bg);
-    border-radius: 6px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    border: 1px solid var(--border);
-    transition: color 0.15s;
-}
 
-.file-info.has-file {
-    color: var(--indigo);
-    font-weight: 600;
-    border-color: #C7D2FE;
-    background: #EEF2FF;
-}
 
 /* ── Divider ── */
 .card-divider {
@@ -323,6 +296,126 @@ form {
     height: 1px;
     background: var(--border);
     margin: 2px 0;
+    margin-top: auto;
+}
+
+.card-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.card-buttons .btn-upload {
+    flex: 1;
+    min-height: 0;
+}
+
+.convert-note {
+    color: var(--text-muted);
+    font-style: normal;
+    font-size: 0.78rem;
+}
+
+/* ── Guide (collapsible) ── */
+.guide-section {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.guide-toggle {
+    width: 100%;
+    padding: 16px 24px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: background 0.15s;
+}
+
+.guide-toggle:hover {
+    background: var(--bg);
+}
+
+.guide-arrow {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.guide-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.guide-content.open {
+    max-height: 300px;
+}
+
+.guide-steps {
+    padding: 0 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guide-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-radius: 8px;
+}
+
+.guide-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    background: var(--text-muted);
+    color: white;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.guide-step-text {
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.guide-step-text strong {
+    color: var(--accent);
+}
+
+/* ── Report Link ── */
+.report-link {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.report-link a {
+    color: var(--text-muted);
+    text-decoration: underline;
+    transition: color 0.15s;
+}
+
+.report-link a:hover {
+    color: var(--accent);
 }
 
 /* ── Disclaimer ── */
@@ -348,4 +441,70 @@ footer {
     text-align: center;
     padding: 18px;
     font-size: 0.8rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    header {
+        padding: 24px 16px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .lang-switcher {
+        position: static;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .hero-text {
+        font-size: 0.92rem;
+    }
+
+    main {
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .card-desc {
+        min-height: auto;
+    }
+
+    .card-buttons .btn-upload {
+        flex: none;
+        padding: 14px 24px;
+    }
+
+    .guide-toggle {
+        padding: 14px 20px;
+        font-size: 0.88rem;
+    }
+
+    .guide-steps {
+        padding: 0 20px 16px;
+    }
+
+    .guide-step {
+        padding: 8px 12px;
+    }
+
+    .disclaimer {
+        padding: 16px;
+        font-size: 0.72rem;
+    }
 }

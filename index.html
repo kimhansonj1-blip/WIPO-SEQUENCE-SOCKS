@@ -6,17 +6,17 @@
     <meta name="description" content="Easily convert 1,000+ sequences to ST.26 compliant XML with just one click.">
     <meta name="keywords" content="wiposequence, wipo sequence, WIPO sequence converter, ST.26 XML, sequence listing, patent sequence, WIPO ST.26, sequence XML converter">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wiposequencesocks.com">    
+    <link rel="canonical" href="https://wiposequencesocks.com">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta property="og:title" content="WIPO SEQUENCE SOCKS - Excel to XML">
     <meta property="og:description" content="WIPO Sequence ST.26 XML Converter for Patent Attorneys.">
-    <meta property="og:image" type="image/ico" href="/logo.png">
+    <meta property="og:image" content="https://wiposequencesocks.com/logo.png">
     <meta property="og:url" content="https://wiposequencesocks.com">
     <meta property="og:type" content="website">
 
     <link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko"/>
     <link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/en"/>
-    <link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/"/>    
+    <link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/"/>
 
     <title>WIPO SEQUENCE SOCKS</title>
     <link rel="icon" type="image/png" href="favicon.png">
@@ -31,11 +31,7 @@
         "name": "WIPO SEQUENCE SOCKS",
         "alternateName": ["WIPO SEQUENCE SOCKS", "WIPO Sequence Converter"],
         "url": "https://wiposequencesocks.com",
-        "description": "WipoSequence: Excel to WIPO Sequence ST.26 XML converter for patent attorneys.",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://wiposequencesocks.com"
-        }
+        "description": "WipoSequence: Excel to WIPO Sequence ST.26 XML converter for patent attorneys."
         }
     </script>
 </head>
@@ -43,71 +39,75 @@
 
 <header>
     <div class="header-inner">
+        <div class="lang-switcher">
+            <a href="https://wiposequencesocks.com/ko/" class="lang-btn">한국어</a>
+            <a href="https://wiposequencesocks.com/en/" class="lang-btn lang-active">EN</a>
+        </div>
         <h1 class="title">WIPO SEQUENCE SOCKS</h1>
         <p class="subtitle">Excel to WIPO Sequence XML Converter</p>
-        <p class="language"><a href="https://wiposequencesocks.com/ko/">한국어</a> | <a href="https://wiposequencesocks.com/en/">ENGLISH</a></p>
+        <p class="hero-text">Convert 1,000+ sequences to ST.26 XML in one click</p>
     </div>
 </header>
 
 <main>
 
-    <section class="how-to-use">
-        <h2 class="section-title">How to Use</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">Click <strong>Download Template</strong> to get the Excel template</div>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">Fill in the template file<br><em>(refer to the example rows)</em></div>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">Click <strong>Choose File</strong> and select your completed .xlsx</div>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-content">Click <strong>Convert &amp; Download</strong> to receive the .xml file<br><em>(30 sec ~ 1 min)</em></div>
-            </div>
-            <div class="step">
-                <div class="step-number">5</div>
-                <div class="step-content">Open WIPO Sequence → Click <strong>Import Sequence Listing</strong></div>
-            </div>
-            <div class="step">
-                <div class="step-number">6</div>
-                <div class="step-content">Click <strong>Upload</strong>, select the .xml, enter Project Name → <strong>Import</strong></div>
-            </div>
-        </div>
-    </section>
-
     <section class="actions">
 
         <div class="card">
             <span class="card-badge download">Step 1</span>
-            <h3 class="card-title">Prepare XLSX</h3>
-            <p class="card-desc">Get the Excel template and fill in your sequence data following the included examples.</p>
+            <h3 class="card-title">Download Template</h3>
+            <p class="card-desc">Download the Excel template and fill in your sequence data following the included examples.</p>
             <div class="card-divider"></div>
-            <a href="WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">Download Template (KOR)</a>
-            <a href="WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">Download Template (ENG)</a>
+            <div class="card-buttons">
+                <a href="WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">Template (KOR)</a>
+                <a href="WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">Template (ENG)</a>
+            </div>
         </div>
 
         <div class="card">
-            <span class="card-badge upload">Steps 3 – 4</span>
+            <span class="card-badge upload">Step 2</span>
             <h3 class="card-title">Convert to XML</h3>
-            <p class="card-desc">Upload your completed template and receive a WIPO-compatible .xml file.<br><em>(it might take 30 sec ~ 1 min)</em></p>
+            <p class="card-desc">Upload your completed template and receive a WIPO ST.26 compatible .xml file.<br><em class="convert-note">Conversion may take 30 sec ~ 1 min</em></p>
             <div class="card-divider"></div>
-            <form id="uploadForm">
-                <label class="btn btn-upload" for="fileInput">Choose File</label>
+            <div class="card-buttons">
+                <label class="btn btn-upload" for="fileInput" id="uploadLabel">Choose File &amp; Convert</label>
                 <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
-                <div class="file-info" id="fileInfo">No file selected</div>
-                <button type="submit" class="btn btn-submit" id="submitBtn"><span class="btn-spinner"></span><span id="submitBtnText">Convert &amp; Download</span></button>
-            </form>
+                <div class="convert-status" id="convertStatus"></div>
+            </div>
         </div>
-        <div class="card card-report">
-            <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a>
+
+    </section>
+
+    <section class="guide-section">
+        <button class="guide-toggle" id="guideToggle">
+            <span>How to import into WIPO Sequence</span>
+            <span class="guide-arrow" id="guideArrow">▼</span>
+        </button>
+        <div class="guide-content" id="guideContent">
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <div class="guide-step-number">1</div>
+                    <div class="guide-step-text">Open <strong>WIPO Sequence</strong> desktop application</div>
+                </div>
+                <div class="guide-step">
+                    <div class="guide-step-number">2</div>
+                    <div class="guide-step-text">Click <strong>Import Sequence Listing</strong></div>
+                </div>
+                <div class="guide-step">
+                    <div class="guide-step-number">3</div>
+                    <div class="guide-step-text">Click <strong>Upload</strong>, select the downloaded .xml file</div>
+                </div>
+                <div class="guide-step">
+                    <div class="guide-step-number">4</div>
+                    <div class="guide-step-text">Enter Project Name → Click <strong>Import</strong></div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <div class="report-link">
+        <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a>
+    </div>
 
 </main>
 
@@ -123,33 +123,22 @@
 <script>
     const RENDER_API_URL = 'https://wiipo-sequence-python.onrender.com/upload';
     const fileInput = document.getElementById('fileInput');
-    const form = document.getElementById('uploadForm');
-    const fileInfo = document.getElementById('fileInfo');
-    const submitBtn = document.getElementById('submitBtn');
+    const uploadLabel = document.getElementById('uploadLabel');
+    const convertStatus = document.getElementById('convertStatus');
 
-    fileInput.addEventListener('change', () => {
-        if (fileInput.files.length > 0) {
-            fileInfo.textContent = fileInput.files[0].name;
-            fileInfo.classList.add('has-file');
-        } else {
-            fileInfo.textContent = 'No file selected';
-            fileInfo.classList.remove('has-file');
-        }
-    });
+    fileInput.addEventListener('change', async () => {
+        if (fileInput.files.length === 0) return;
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+        const file = fileInput.files[0];
 
-        if (fileInput.files.length === 0) {
-            alert('Please select an .xlsx file first.');
-            return;
-        }
-
-        submitBtn.disabled = true;
-        document.getElementById('submitBtnText').textContent = 'Converting... (please wait)';
+        // Disable further uploads during conversion
+        uploadLabel.classList.add('disabled');
+        fileInput.disabled = true;
+        convertStatus.textContent = 'Converting... please wait';
+        convertStatus.className = 'convert-status converting';
 
         const formData = new FormData();
-        formData.append('excel_file', fileInput.files[0]);
+        formData.append('excel_file', file);
 
         try {
             const response = await fetch(RENDER_API_URL, {
@@ -169,18 +158,32 @@
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
-                alert('Bonne Appétit !');
+                convertStatus.textContent = 'Download complete!';
+                convertStatus.className = 'convert-status success';
             } else {
                 const errorText = await response.text();
-                alert(`Server Error: ${errorText}`);
+                convertStatus.textContent = 'Server error. Please try again.';
+                convertStatus.className = 'convert-status error';
             }
         } catch (error) {
             console.error('Upload error:', error);
-            alert('Cannot connect to the server. Please try later.');
+            convertStatus.textContent = 'Cannot connect to server. Please try later.';
+            convertStatus.className = 'convert-status error';
         } finally {
-            submitBtn.disabled = false;
-            document.getElementById('submitBtnText').textContent = 'Convert & Download';
+            uploadLabel.classList.remove('disabled');
+            fileInput.disabled = false;
+            fileInput.value = '';
         }
+    });
+
+    // Guide toggle
+    const guideToggle = document.getElementById('guideToggle');
+    const guideContent = document.getElementById('guideContent');
+    const guideArrow = document.getElementById('guideArrow');
+
+    guideToggle.addEventListener('click', () => {
+        const isOpen = guideContent.classList.toggle('open');
+        guideArrow.textContent = isOpen ? '▲' : '▼';
     });
 </script>
 

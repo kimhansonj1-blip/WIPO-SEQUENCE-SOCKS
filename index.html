@@ -38,6 +38,18 @@
         "description": "WipoSequence: Excel to WIPO Sequence ST.26 XML converter for patent attorneys."
         }
     </script>
+    <script>
+        (function() {
+            if (localStorage.getItem('lang_override')) return;
+            var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            var map = { ko: '/ko/', ja: '/ja/', zh: '/zh/', es: '/es/', fr: '/fr/' };
+            var target = null;
+            for (var key in map) {
+                if (lang.indexOf(key) === 0) { target = map[key]; break; }
+            }
+            if (target) window.location.replace(target);
+        })();
+    </script>
 </head>
 <body>
 
@@ -192,6 +204,13 @@
     guideToggle.addEventListener('click', () => {
         const isOpen = guideContent.classList.toggle('open');
         guideArrow.textContent = isOpen ? '▲' : '▼';
+    });
+
+    // Remember manual language selection
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            localStorage.setItem('lang_override', 'true');
+        });
     });
 </script>
 

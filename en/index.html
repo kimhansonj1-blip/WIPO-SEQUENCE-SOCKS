@@ -192,6 +192,12 @@
         const isOpen = guideContent.classList.toggle('open');
         guideArrow.textContent = isOpen ? '▲' : '▼';
     });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            localStorage.setItem('lang_override', 'true');
+        });
+    });
 </script>
 
 </body>

@@ -496,18 +496,20 @@ footer {
 }
 
 .footer-links {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
-    color: #94A3B8;
+    color: #CBD5E1;
     margin: 0 8px;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-size: 0.82rem;
     transition: color 0.15s;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: var(--header-accent);
 }
 
 /* ── Responsive ── */

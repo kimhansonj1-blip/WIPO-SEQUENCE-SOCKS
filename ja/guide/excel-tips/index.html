@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WIPO Sequence SOCKSのExcelテンプレートの記入方法 — 配列タイプ、生物種名、フィーチャーキー、よくあるミス。">
+    <meta name="keywords" content="wiposequenceエクセルテンプレート, ST.26 XMLエクセル, 配列表テンプレート, 特許配列エクセル, WIPOテンプレートガイド">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/ja/guide/excel-tips/">
+    <title>Excelテンプレートのコツ - ガイド - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="../../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="メニューを開く">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="メニューを閉じる">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">メニュー</div>
+            <a href="/ja/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> ホーム
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">ガイド</div>
+            <a href="/ja/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> 全ガイド
+            </a>
+            <a href="/ja/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> WIPO Sequence インストール
+            </a>
+            <a href="/ja/guide/excel-tips/" class="sidebar-link active">
+                <span class="sidebar-icon">&#128196;</span> Excelテンプレートのコツ
+            </a>
+            <a href="/ja/guide/faq/" class="sidebar-link">
+                <span class="sidebar-icon">&#10067;</span> よくある質問
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">法的事項</div>
+            <a href="/ja/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> プライバシーポリシー
+            </a>
+            <a href="/ja/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> 利用規約
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">Excelテンプレートのコツ</h1>
+        <p class="subtitle">テンプレートの正しい記入方法</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/ja/guide/">ガイド</a> &rsaquo; Excelテンプレートのコツ
+    </div>
+
+    <article class="guide-article">
+
+        <h2>テンプレートの概要</h2>
+        <p>本Excelテンプレートは、複数の配列を一度に入力しやすいように設計されています。各行が1つの配列を表し、列にはST.26で必要なすべてのフィールドが含まれています。</p>
+
+        <h2>必須フィールド</h2>
+        <ul>
+            <li><strong>SEQ ID NO：</strong>1から始まる連番（空白の場合は自動割り当て）</li>
+            <li><strong>Molecule Type（分子タイプ）：</strong>DNA、RNA、またはAA（アミノ酸）</li>
+            <li><strong>Organism Name（生物種名）：</strong>起源生物の学名（例：<code>Homo sapiens</code>、<code>Mus musculus</code>）</li>
+            <li><strong>Sequence（配列）：</strong>実際の核酸またはアミノ酸配列</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>ヒント：</strong>テンプレートに含まれているサンプル行を参照してください。DNA、RNA、タンパク質配列の正しい記入例が示されています。
+        </div>
+
+        <h2>配列フォーマットのルール</h2>
+
+        <h3>DNA / RNA配列</h3>
+        <ul>
+            <li>IUPAC一文字コードを使用：<code>a, t, g, c</code></li>
+            <li>RNA配列も <code>u</code> ではなく <code>t</code> を使用する（WIPO Sequenceおよび本テンプレートの仕様）</li>
+            <li>大文字・小文字どちらでも使用可能（自動変換されます）</li>
+            <li>スペース、改行、数字は自動的に除去されます</li>
+            <li>WIPO ST.26標準により最低10ヌクレオチド必要</li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>重要：</strong>RNA配列であっても <code>u</code> ではなく <code>t</code> と記入してください。WIPO Sequenceでは配列表においてDNA・RNA両方にサイミン表記を使用します。
+        </div>
+
+        <h3>アミノ酸配列</h3>
+        <ul>
+            <li>アミノ酸一文字コードを使用（例：<code>M, A, K, L</code>）</li>
+            <li>WIPO ST.26標準により最低4アミノ酸必要</li>
+            <li>未知または未指定のアミノ酸には <code>X</code> を使用</li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>よくあるミス：</strong>配列フィールドに「&gt;」のようなヘッダー文字（FASTAフォーマットのヘッダー）を含めないでください。配列フィールドには生の配列文字のみを入力してください。
+        </div>
+
+        <h2>生物種名</h2>
+        <p>生物種名はNCBIタクソノミーの命名規則に従う必要があります：</p>
+        <ul>
+            <li>学名の正式名称を使用する（例：「Human」ではなく <code>Homo sapiens</code>）</li>
+            <li>人工合成配列には <code>Artificial Sequence</code> を使用する</li>
+            <li>未知の生物には <code>Unknown</code> を使用する</li>
+            <li>名称は表示上は大文字・小文字を区別し、NCBIタクソノミーに対して検証されます</li>
+        </ul>
+
+        <h2>フィーチャー注釈（任意）</h2>
+        <p>配列の機能領域を説明するためにフィーチャー注釈を追加できます：</p>
+        <ul>
+            <li><strong>Feature Key（フィーチャーキー）：</strong>例：<code>CDS</code>、<code>misc_feature</code>、<code>source</code></li>
+            <li><strong>Location（位置）：</strong>位置の範囲（例：<code>1..300</code>）</li>
+            <li><strong>Description（説明）：</strong>フィーチャーの簡単な説明</li>
+        </ul>
+
+        <h2>大容量データのヒント</h2>
+        <ul>
+            <li>本コンバーターは1ファイルあたり1,000件以上の配列に対応</li>
+            <li>非常に大きなファイルの場合、変換に最大1〜2分かかる場合があります</li>
+            <li>最適なパフォーマンスのためExcelファイルは10MB以下に保つことを推奨</li>
+            <li>5,000件を超える配列がある場合は、複数のファイルに分割することを検討してください</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>ヒント：</strong>変換後は、特許庁に提出する前にWIPO SequenceでXMLを必ず検証してください。バリデーターにより残存する問題が検出されます。
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WIPO Sequence SOCKSコンバーターに関するよくある質問 — トラブルシューティング、ST.26標準、使い方のヒント。">
+    <meta name="keywords" content="wiposequenceよくある質問, WIPO sequenceヘルプ, ST.26 XML質問, 配列表トラブルシュート, 特許配列FAQ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/ja/guide/faq/">
+    <title>よくある質問 - ガイド - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="../../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="メニューを開く">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="メニューを閉じる">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">メニュー</div>
+            <a href="/ja/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> ホーム
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">ガイド</div>
+            <a href="/ja/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> 全ガイド
+            </a>
+            <a href="/ja/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> WIPO Sequence インストール
+            </a>
+            <a href="/ja/guide/excel-tips/" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Excelテンプレートのコツ
+            </a>
+            <a href="/ja/guide/faq/" class="sidebar-link active">
+                <span class="sidebar-icon">&#10067;</span> よくある質問
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">法的事項</div>
+            <a href="/ja/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> プライバシーポリシー
+            </a>
+            <a href="/ja/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> 利用規約
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">よくある質問</h1>
+        <p class="subtitle">Frequently Asked Questions</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/ja/guide/">ガイド</a> &rsaquo; よくある質問
+    </div>
+
+    <article class="guide-article">
+
+        <h2>コンバーターについて</h2>
+
+        <h3>WIPO SEQUENCE SOCKSとは何ですか？</h3>
+        <p>WIPO SEQUENCE SOCKSは、配列データを含むExcelスプレッドシートをWIPO ST.26準拠のXMLファイルに変換する無料のオンラインツールです。特許出願用の配列表を準備する必要がある弁理士や研究者のために設計されています。</p>
+
+        <h3>このツールは無料ですか？</h3>
+        <p>はい、完全に無料でご利用いただけます。会員登録やログインは不要です。</p>
+
+        <h3>データは安全ですか？</h3>
+        <p>はい。アップロードされたファイルはメモリ上で処理され、サーバーに<strong>保存されることはありません</strong>。変換が完了してXMLファイルをダウンロードすると、すべてのデータは自動的に破棄されます。詳細は<a href="/ja/privacy/">プライバシーポリシー</a>をご覧ください。</p>
+
+        <h3>一度に何件の配列を変換できますか？</h3>
+        <p>本コンバーターは1つのExcelファイルで1,000件以上の配列に対応しています。最適なパフォーマンスのため、ファイルサイズは10MB以下を推奨します。5,000件を超える配列がある場合は、複数のファイルに分割することを検討してください。</p>
+
+        <h2>WIPO ST.26について</h2>
+
+        <h3>WIPO ST.26とは何ですか？</h3>
+        <p>WIPO標準ST.26は、特許出願における核酸・アミノ酸配列表の表示に関する国際標準です。旧ST.25標準に取って代わり、プレーンテキストの代わりにXML形式を使用します。</p>
+
+        <h3>ST.26はいつから必須になりましたか？</h3>
+        <p>WIPO ST.26は、2022年7月1日以降に出願された国際特許出願の配列表として必須フォーマットとなりました。多くの国内特許庁もこの標準を採用しています。</p>
+
+        <h3>WIPO Sequenceソフトウェアはまだ必要ですか？</h3>
+        <p>はい。本ツールでExcelファイルをXMLに変換した後、特許出願を提出する前にXMLをWIPO Sequenceにインポートして検証し、最終調整を行う必要があります。<a href="/ja/guide/install/">インストールガイド</a>をご覧ください。</p>
+
+        <h2>トラブルシューティング</h2>
+
+        <h3>変換に時間がかかりすぎる</h3>
+        <p>大きなファイル（500件以上の配列）の場合、変換に30秒〜1分かかる場合があります。2分以上かかる場合は以下をお試しください：</p>
+        <ul>
+            <li>ページを更新して再度お試しください</li>
+            <li>ファイルを小さなバッチに分割してサイズを縮小してください</li>
+            <li>インターネット接続を確認してください</li>
+        </ul>
+
+        <h3>「サーバーエラー」メッセージが表示される</h3>
+        <p>通常、Excelファイルの形式が認識されないことを意味します。以下をご確認ください：</p>
+        <ul>
+            <li>公式テンプレートを使用する（ホームページからダウンロード）</li>
+            <li>ファイルを <code>.xlsx</code> 形式で保存する（<code>.xls</code> や <code>.csv</code> は不可）</li>
+            <li>テンプレートのシート名を変更または削除しない</li>
+        </ul>
+
+        <h3>「サーバーに接続できません」</h3>
+        <p>変換サーバーが一時的に利用できない場合があります。数分待ってから再度お試しください。問題が続く場合は、<a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">エラー報告フォーム</a>からご連絡ください。</p>
+
+        <h3>XMLファイルがWIPO Sequenceにインポートできない</h3>
+        <p>以下をご確認ください：</p>
+        <ul>
+            <li>最新バージョンのWIPO Sequenceを使用していることを確認する</li>
+            <li>「Open」ではなく「Import Sequence Listing」（配列表インポート）を使用する</li>
+            <li>元のExcelデータが正しいフォーマットに従っていることを確認する（<a href="/ja/guide/excel-tips/">Excelテンプレートのコツ</a>参照）</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>まだ問題が解決しない場合は、</strong><a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">エラー報告フォーム</a>からお知らせください。問題の説明と、可能であればスクリーンショットをご添付ください。
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="如何填写 WIPO Sequence SOCKS Excel 模板 — 序列类型、生物体名称、特征键及常见错误。">
+    <meta name="keywords" content="wiposequence excel模板, ST.26 XML excel, 序列表模板, 专利序列excel, WIPO模板指南">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/zh/guide/excel-tips/">
+    <title>Excel模板技巧 - 指南 - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="../../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="打开菜单">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="关闭菜单">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">菜单</div>
+            <a href="/zh/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> 首页
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">指南</div>
+            <a href="/zh/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> 全部指南
+            </a>
+            <a href="/zh/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> 安装 WIPO Sequence
+            </a>
+            <a href="/zh/guide/excel-tips/" class="sidebar-link active">
+                <span class="sidebar-icon">&#128196;</span> Excel模板技巧
+            </a>
+            <a href="/zh/guide/faq/" class="sidebar-link">
+                <span class="sidebar-icon">&#10067;</span> 常见问题
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">法律信息</div>
+            <a href="/zh/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> 隐私政策
+            </a>
+            <a href="/zh/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> 服务条款
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">Excel模板技巧</h1>
+        <p class="subtitle">如何正确填写模板</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/zh/guide/">指南</a> &rsaquo; Excel模板技巧
+    </div>
+
+    <article class="guide-article">
+
+        <h2>模板概述</h2>
+        <p>我们的 Excel 模板设计用于方便地一次输入多条序列。每行代表一条序列，列中包含 ST.26 所需的所有字段。</p>
+
+        <h2>必填字段</h2>
+        <ul>
+            <li><strong>SEQ ID NO：</strong>从 1 开始的连续编号（留空则自动分配）</li>
+            <li><strong>Molecule Type（分子类型）：</strong>DNA、RNA 或 AA（氨基酸）</li>
+            <li><strong>Organism Name（生物体名称）：</strong>来源生物的学名（例如：<code>Homo sapiens</code>、<code>Mus musculus</code>）</li>
+            <li><strong>Sequence（序列）：</strong>实际的核苷酸或氨基酸序列</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>提示：</strong>请参考模板中包含的示例行。这些示例展示了 DNA、RNA 和蛋白质序列的正确填写格式。
+        </div>
+
+        <h2>序列格式规则</h2>
+
+        <h3>DNA / RNA 序列</h3>
+        <ul>
+            <li>使用 IUPAC 单字母代码：<code>a, t, g, c</code></li>
+            <li>RNA 序列也使用 <code>t</code> 而非 <code>u</code>（WIPO Sequence 和本模板的规定）</li>
+            <li>大小写均可（自动转换）</li>
+            <li>空格、换行符和数字会自动去除</li>
+            <li>WIPO ST.26 标准要求最少 10 个核苷酸</li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>重要：</strong>即使是 RNA 序列，也请写 <code>t</code> 而不是 <code>u</code>。WIPO Sequence 在序列表中对 DNA 和 RNA 均使用胸腺嘧啶符号。
+        </div>
+
+        <h3>氨基酸序列</h3>
+        <ul>
+            <li>使用氨基酸单字母代码（例如：<code>M, A, K, L</code>）</li>
+            <li>WIPO ST.26 标准要求最少 4 个氨基酸</li>
+            <li>未知或未指定的氨基酸使用 <code>X</code></li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>常见错误：</strong>请勿在序列字段中包含"&gt;"等标题字符（FASTA 格式标题）。序列字段中只能输入原始序列字符。
+        </div>
+
+        <h2>生物体名称</h2>
+        <p>生物体名称必须遵循 NCBI 分类学命名规范：</p>
+        <ul>
+            <li>使用完整学名（例如：<code>Homo sapiens</code>，而非"Human"）</li>
+            <li>人工合成序列使用 <code>Artificial Sequence</code></li>
+            <li>未知生物体使用 <code>Unknown</code></li>
+            <li>名称区分大小写，并根据 NCBI 分类学进行验证</li>
+        </ul>
+
+        <h2>特征注释（可选）</h2>
+        <p>您可以添加特征注释来描述序列的功能区域：</p>
+        <ul>
+            <li><strong>Feature Key（特征键）：</strong>例如：<code>CDS</code>、<code>misc_feature</code>、<code>source</code></li>
+            <li><strong>Location（位置）：</strong>位置范围（例如：<code>1..300</code>）</li>
+            <li><strong>Description（描述）：</strong>对特征的简短描述</li>
+        </ul>
+
+        <h2>大数据集技巧</h2>
+        <ul>
+            <li>本转换工具支持单个文件中超过 1,000 条序列</li>
+            <li>对于非常大的文件，转换可能需要最多 1-2 分钟</li>
+            <li>建议将 Excel 文件保持在 10 MB 以下以获得最佳性能</li>
+            <li>如果序列超过 5,000 条，请考虑拆分为多个文件</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>提示：</strong>转换后，在向专利局提交之前，请务必在 WIPO Sequence 中验证您的 XML。验证器将捕获任何剩余问题。
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

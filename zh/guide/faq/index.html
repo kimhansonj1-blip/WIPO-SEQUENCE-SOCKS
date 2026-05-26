@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关于 WIPO Sequence SOCKS 转换工具的常见问题 — 故障排除、ST.26 标准及使用技巧。">
+    <meta name="keywords" content="wiposequence常见问题, WIPO sequence帮助, ST.26 XML问题, 序列表故障排除, 专利序列FAQ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/zh/guide/faq/">
+    <title>常见问题 - 指南 - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="../../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="打开菜单">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="关闭菜单">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">菜单</div>
+            <a href="/zh/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> 首页
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">指南</div>
+            <a href="/zh/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> 全部指南
+            </a>
+            <a href="/zh/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> 安装 WIPO Sequence
+            </a>
+            <a href="/zh/guide/excel-tips/" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Excel模板技巧
+            </a>
+            <a href="/zh/guide/faq/" class="sidebar-link active">
+                <span class="sidebar-icon">&#10067;</span> 常见问题
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">法律信息</div>
+            <a href="/zh/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> 隐私政策
+            </a>
+            <a href="/zh/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> 服务条款
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">常见问题</h1>
+        <p class="subtitle">Frequently Asked Questions</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/zh/guide/">指南</a> &rsaquo; 常见问题
+    </div>
+
+    <article class="guide-article">
+
+        <h2>关于转换工具</h2>
+
+        <h3>什么是 WIPO SEQUENCE SOCKS？</h3>
+        <p>WIPO SEQUENCE SOCKS 是一款免费的在线工具，可将包含序列数据的 Excel 电子表格转换为符合 WIPO ST.26 标准的 XML 文件。专为需要为专利申请准备序列表的专利代理人和研究人员设计。</p>
+
+        <h3>这个工具是免费的吗？</h3>
+        <p>是的，完全免费使用。无需注册或登录。</p>
+
+        <h3>我的数据安全吗？</h3>
+        <p>是的。您上传的文件在内存中处理，<strong>绝不会存储</strong>在我们的服务器上。转换完成并下载 XML 文件后，所有数据将自动销毁。详情请查看我们的<a href="/zh/privacy/">隐私政策</a>。</p>
+
+        <h3>一次可以转换多少条序列？</h3>
+        <p>本转换工具支持单个 Excel 文件中超过 1,000 条序列。为获得最佳性能，建议文件大小保持在 10 MB 以下。如果序列超过 5,000 条，请考虑拆分为多个文件。</p>
+
+        <h2>关于 WIPO ST.26</h2>
+
+        <h3>什么是 WIPO ST.26？</h3>
+        <p>WIPO 标准 ST.26 是专利申请中呈现核苷酸和氨基酸序列表的国际标准。它取代了旧的 ST.25 标准，使用 XML 格式代替纯文本。</p>
+
+        <h3>ST.26 何时成为强制要求？</h3>
+        <p>WIPO ST.26 自 2022 年 7 月 1 日起成为国际专利申请序列表的强制格式。大多数国家专利局也已采用该标准。</p>
+
+        <h3>还需要 WIPO Sequence 软件吗？</h3>
+        <p>是的。使用本工具将 Excel 文件转换为 XML 后，在提交专利申请之前，应将 XML 导入 WIPO Sequence 进行验证并做最终调整。请参阅我们的<a href="/zh/guide/install/">安装指南</a>。</p>
+
+        <h2>故障排除</h2>
+
+        <h3>转换时间过长</h3>
+        <p>对于大型文件（500 条以上序列），转换可能需要 30 秒到 1 分钟。如果超过 2 分钟，请尝试：</p>
+        <ul>
+            <li>刷新页面后重试</li>
+            <li>将文件拆分为更小的批次以减小文件大小</li>
+            <li>检查您的网络连接</li>
+        </ul>
+
+        <h3>出现"服务器错误"提示</h3>
+        <p>这通常意味着 Excel 文件格式无法识别。请确保：</p>
+        <ul>
+            <li>使用官方模板（从主页下载）</li>
+            <li>将文件保存为 <code>.xlsx</code> 格式（不支持 <code>.xls</code> 或 <code>.csv</code>）</li>
+            <li>不要重命名或删除模板的工作表名称</li>
+        </ul>
+
+        <h3>"无法连接到服务器"</h3>
+        <p>我们的转换服务器可能暂时不可用。请等待几分钟后重试。如果问题持续存在，请通过<a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">错误报告</a>表单联系我们。</p>
+
+        <h3>XML 文件无法导入 WIPO Sequence</h3>
+        <p>请检查以下内容：</p>
+        <ul>
+            <li>确保使用最新版本的 WIPO Sequence</li>
+            <li>使用"Import Sequence Listing"（导入序列表），而非"Open"（打开）</li>
+            <li>验证原始 Excel 数据是否遵循正确格式（参见 <a href="/zh/guide/excel-tips/">Excel模板技巧</a>）</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>仍然遇到问题？</strong>请使用<a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">错误报告</a>表单告知我们。请附上问题描述，如有可能请附上截图。
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

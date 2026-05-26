@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Como rellenar la plantilla Excel de WIPO Sequence SOCKS — tipos de secuencia, nombres de organismos, claves de caracteristicas y errores comunes a evitar.">
+    <meta name="keywords" content="plantilla excel wiposequence, excel XML ST.26, plantilla listado de secuencias, excel secuencias de patente, guia plantilla WIPO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/es/guide/excel-tips/">
+    <title>Consejos para plantilla Excel - Guia - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="../../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menu">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Cerrar menu">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Menu</div>
+            <a href="/es/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Inicio
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Guias</div>
+            <a href="/es/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> Todas las guias
+            </a>
+            <a href="/es/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> Instalar WIPO Sequence
+            </a>
+            <a href="/es/guide/excel-tips/" class="sidebar-link active">
+                <span class="sidebar-icon">&#128196;</span> Consejos para plantilla Excel
+            </a>
+            <a href="/es/guide/faq/" class="sidebar-link">
+                <span class="sidebar-icon">&#10067;</span> Preguntas frecuentes
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Legal</div>
+            <a href="/es/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> Politica de privacidad
+            </a>
+            <a href="/es/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> Terminos de servicio
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">Consejos para plantilla Excel</h1>
+        <p class="subtitle">Como rellenar la plantilla correctamente</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/es/guide/">Guias</a> &rsaquo; Consejos para plantilla Excel
+    </div>
+
+    <article class="guide-article">
+
+        <h2>Descripcion general de la plantilla</h2>
+        <p>Nuestra plantilla Excel esta disenada para facilitar la introduccion de multiples secuencias a la vez. Cada fila representa una secuencia y las columnas recogen todos los campos requeridos por ST.26.</p>
+
+        <h2>Campos obligatorios</h2>
+        <ul>
+            <li><strong>SEQ ID NO:</strong> Numero secuencial que comienza en 1 (asignado automaticamente si se deja en blanco)</li>
+            <li><strong>Tipo de molecula:</strong> DNA, RNA o AA (aminoacido)</li>
+            <li><strong>Nombre del organismo:</strong> Nombre cientifico del organismo fuente (p. ej., <code>Homo sapiens</code>, <code>Mus musculus</code>)</li>
+            <li><strong>Secuencia:</strong> La secuencia real de nucleotidos o aminoacidos</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Consejo:</strong> Consulte las filas de ejemplo incluidas en la plantilla. Muestran entradas con el formato correcto para secuencias de DNA, RNA y proteinas.
+        </div>
+
+        <h2>Reglas de formato de secuencia</h2>
+
+        <h3>Secuencias de DNA / RNA</h3>
+        <ul>
+            <li>Utilice codigos IUPAC de una sola letra: <code>a, t, g, c</code></li>
+            <li>Las secuencias de RNA tambien utilizan <code>t</code> en lugar de <code>u</code> (tanto en WIPO Sequence como en nuestra plantilla)</li>
+            <li>Minusculas o mayusculas funcionan indistintamente (se convierten automaticamente)</li>
+            <li>Los espacios, saltos de linea y numeros se eliminan automaticamente</li>
+            <li>Se requieren un minimo de 10 nucleotidos segun el estandar WIPO ST.26</li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>Importante:</strong> Incluso para secuencias de RNA, escriba <code>t</code> y no <code>u</code>. WIPO Sequence utiliza la notacion de timina tanto para DNA como para RNA en el listado de secuencias.
+        </div>
+
+        <h3>Secuencias de aminoacidos</h3>
+        <ul>
+            <li>Utilice codigos de aminoacidos de una sola letra (p. ej., <code>M, A, K, L</code>)</li>
+            <li>Se requieren un minimo de 4 aminoacidos segun el estandar WIPO ST.26</li>
+            <li>Use <code>X</code> para aminoacidos desconocidos o no especificados</li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>Error comun:</strong> No incluya caracteres de encabezado como "&gt;" (encabezados en formato FASTA) en el campo de secuencia. Solo deben introducirse los caracteres de la secuencia sin procesar.
+        </div>
+
+        <h2>Nombre del organismo</h2>
+        <p>El nombre del organismo debe seguir las convenciones de nomenclatura taxonomica del NCBI:</p>
+        <ul>
+            <li>Utilice el nombre cientifico completo (p. ej., <code>Homo sapiens</code>, no "Humano")</li>
+            <li>Para secuencias artificiales o sinteticas, use <code>Artificial Sequence</code></li>
+            <li>Para organismos desconocidos, use <code>Unknown</code></li>
+            <li>El nombre distingue entre mayusculas y minusculas segun se muestra, pero se valida con la taxonomia del NCBI</li>
+        </ul>
+
+        <h2>Anotaciones de caracteristicas (opcional)</h2>
+        <p>Puede agregar anotaciones de caracteristicas para describir regiones funcionales de sus secuencias:</p>
+        <ul>
+            <li><strong>Clave de caracteristica:</strong> p. ej., <code>CDS</code>, <code>misc_feature</code>, <code>source</code></li>
+            <li><strong>Localizacion:</strong> Rango de posicion (p. ej., <code>1..300</code>)</li>
+            <li><strong>Descripcion:</strong> Breve descripcion de la caracteristica</li>
+        </ul>
+
+        <h2>Consejos para conjuntos de datos grandes</h2>
+        <ul>
+            <li>Nuestro conversor maneja mas de 1.000 secuencias en un solo archivo</li>
+            <li>Para archivos muy grandes, la conversion puede tardar hasta 1-2 minutos</li>
+            <li>Mantenga el archivo Excel por debajo de 10 MB para un rendimiento optimo</li>
+            <li>Si tiene mas de 5.000 secuencias, considere dividirlas en varios archivos</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Consejo:</strong> Tras la conversion, valide siempre su XML en WIPO Sequence antes de enviarlo a una oficina de patentes. El validador detectara cualquier problema restante.
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -90,11 +90,16 @@
 
         <h3>DNA / RNA Sequences</h3>
         <ul>
-            <li>Use single-letter IUPAC codes: <code>a, t, g, c</code> (DNA) or <code>a, u, g, c</code> (RNA)</li>
+            <li>Use single-letter IUPAC codes: <code>a, t, g, c</code></li>
+            <li>RNA sequences also use <code>t</code> instead of <code>u</code> (both in WIPO Sequence and in our template)</li>
             <li>Lowercase or uppercase both work (converted automatically)</li>
             <li>Spaces, line breaks, and numbers are automatically stripped</li>
             <li>Minimum 10 nucleotides required by WIPO ST.26 standard</li>
         </ul>
+
+        <div class="warn-box">
+            <strong>Important:</strong> Even for RNA sequences, write <code>t</code> not <code>u</code>. WIPO Sequence uses thymine notation for both DNA and RNA in the sequence listing.
+        </div>
 
         <h3>Amino Acid Sequences</h3>
         <ul>

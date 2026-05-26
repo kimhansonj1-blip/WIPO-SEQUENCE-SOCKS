@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Easily convert 1,000+ sequences to ST.26 compliant XML with just one click.">
-    <meta name="keywords" content="wiposequence, wipo sequence, WIPO sequence converter, ST.26 XML, sequence listing, patent sequence, WIPO ST.26, sequence XML converter">
+    <meta name="description" content="1,000件以上の配列をワンクリックでST.26準拠のXMLに変換できるウェブツール">
+    <meta name="keywords" content="wiposequence, wipo sequence, WIPO sequence converter, ST.26 XML, sequence listing, patent sequence, WIPO ST.26, 配列変換">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wiposequencesocks.com/en/">
+    <link rel="canonical" href="https://wiposequencesocks.com/ja/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta property="og:title" content="WIPO SEQUENCE SOCKS - Excel to XML">
-    <meta property="og:description" content="WIPO Sequence ST.26 XML Converter for Patent Attorneys.">
+    <meta property="og:title" content="WIPO SEQUENCE SOCKS - ExcelからXMLへ">
+    <meta property="og:description" content="弁理士のためのWIPO Sequence ST.26 XML変換ツール">
     <meta property="og:image" content="https://wiposequencesocks.com/logo.png">
-    <meta property="og:url" content="https://wiposequencesocks.com/en/">
+    <meta property="og:url" content="https://wiposequencesocks.com/ja/">
     <meta property="og:type" content="website">
 
     <link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/"/>
@@ -35,7 +35,7 @@
         "name": "WIPO SEQUENCE SOCKS",
         "alternateName": ["WIPO SEQUENCE SOCKS", "WIPO Sequence Converter"],
         "url": "https://wiposequencesocks.com",
-        "description": "WipoSequence: Excel to WIPO Sequence ST.26 XML converter for patent attorneys."
+        "description": "WipoSequence: 弁理士のためのExcelベースWIPO Sequence ST.26 XML変換ツール。"
         }
     </script>
 </head>
@@ -45,15 +45,15 @@
     <div class="header-inner">
         <div class="lang-switcher">
             <a href="https://wiposequencesocks.com/ko/" class="lang-btn">한국어</a>
-            <a href="https://wiposequencesocks.com/en/" class="lang-btn lang-active">EN</a>
-            <a href="https://wiposequencesocks.com/ja/" class="lang-btn">日本語</a>
+            <a href="https://wiposequencesocks.com/en/" class="lang-btn">EN</a>
+            <a href="https://wiposequencesocks.com/ja/" class="lang-btn lang-active">日本語</a>
             <a href="https://wiposequencesocks.com/zh/" class="lang-btn">中文</a>
             <a href="https://wiposequencesocks.com/es/" class="lang-btn">ES</a>
             <a href="https://wiposequencesocks.com/fr/" class="lang-btn">FR</a>
         </div>
         <h1 class="title">WIPO SEQUENCE SOCKS</h1>
-        <p class="subtitle">Excel to WIPO Sequence XML Converter</p>
-        <p class="hero-text">Convert 1,000+ sequences to ST.26 XML in one click</p>
+        <p class="subtitle">ExcelからWIPO Sequence XMLへの変換ツール</p>
+        <p class="hero-text">1,000件以上の配列をワンクリックでST.26 XMLに変換</p>
     </div>
 </header>
 
@@ -62,23 +62,23 @@
     <section class="actions">
 
         <div class="card">
-            <span class="card-badge download">Step 1</span>
-            <h3 class="card-title">Download Template</h3>
-            <p class="card-desc">Download the Excel template and fill in your sequence data following the included examples.</p>
+            <span class="card-badge download">ステップ 1</span>
+            <h3 class="card-title">テンプレートをダウンロード</h3>
+            <p class="card-desc">Excelテンプレートをダウンロードし、サンプルを参考に配列データを入力してください。</p>
             <div class="card-divider"></div>
             <div class="card-buttons">
-                <a href="../WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">Template (KOR)</a>
-                <a href="../WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">Template (ENG)</a>
+                <a href="../WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">テンプレート (KOR)</a>
+                <a href="../WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">テンプレート (ENG)</a>
             </div>
         </div>
 
         <div class="card">
-            <span class="card-badge upload">Step 2</span>
-            <h3 class="card-title">Convert to XML</h3>
-            <p class="card-desc">Upload your completed template and receive a WIPO ST.26 compatible .xml file.<br><em class="convert-note">Conversion may take 30 sec ~ 1 min</em></p>
+            <span class="card-badge upload">ステップ 2</span>
+            <h3 class="card-title">XMLに変換</h3>
+            <p class="card-desc">作成したテンプレートをアップロードすると、WIPO ST.26対応のXMLファイルに変換されます。<br><em class="convert-note">変換に30秒〜1分かかります</em></p>
             <div class="card-divider"></div>
             <div class="card-buttons">
-                <label class="btn btn-upload" for="fileInput" id="uploadLabel">Choose File &amp; Convert</label>
+                <label class="btn btn-upload" for="fileInput" id="uploadLabel">ファイルを選択＆変換</label>
                 <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
                 <div class="convert-status" id="convertStatus"></div>
             </div>
@@ -88,40 +88,40 @@
 
     <section class="guide-section">
         <button class="guide-toggle" id="guideToggle">
-            <span>How to import into WIPO Sequence</span>
+            <span>WIPO Sequenceへのインポート方法</span>
             <span class="guide-arrow" id="guideArrow">▼</span>
         </button>
         <div class="guide-content" id="guideContent">
             <div class="guide-steps">
                 <div class="guide-step">
                     <div class="guide-step-number">1</div>
-                    <div class="guide-step-text">Open <strong>WIPO Sequence</strong> desktop application</div>
+                    <div class="guide-step-text"><strong>WIPO Sequence</strong>デスクトップアプリを開く</div>
                 </div>
                 <div class="guide-step">
                     <div class="guide-step-number">2</div>
-                    <div class="guide-step-text">Click <strong>Import Sequence Listing</strong></div>
+                    <div class="guide-step-text"><strong>Import Sequence Listing</strong>をクリック</div>
                 </div>
                 <div class="guide-step">
                     <div class="guide-step-number">3</div>
-                    <div class="guide-step-text">Click <strong>Upload</strong>, select the downloaded .xml file</div>
+                    <div class="guide-step-text"><strong>Upload</strong>をクリックし、ダウンロードした.xmlファイルを選択</div>
                 </div>
                 <div class="guide-step">
                     <div class="guide-step-number">4</div>
-                    <div class="guide-step-text">Enter Project Name → Click <strong>Import</strong></div>
+                    <div class="guide-step-text">Project Nameを入力 → <strong>Import</strong>をクリック</div>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="report-link">
-        <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a>
+        <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">エラー報告</a>
     </div>
 
 </main>
 
 <div class="disclaimer">
-    <p><strong>No Data Retention:</strong> This tool does not collect, store, or reuse any user data. All processing is transient and your information remains entirely under your control.</p>
-    <p><strong>Limitation of Liability:</strong> The creator (KangPil Kim) shall not be held liable for any direct, indirect, or consequential damages arising from use of this software. Users assume all responsibility.</p>
+    <p><strong>データ保持方針:</strong> 本ツールはユーザーデータを一切収集、保存、再利用しません。すべての処理は一時的であり、情報は完全にユーザーの管理下にあります。</p>
+    <p><strong>免責事項:</strong> 制作者（Kim KangPil）は、本ソフトウェアの使用により生じるいかなる直接的、間接的、または結果的損害についても責任を負いません。ユーザーはすべての責任を負います。</p>
 </div>
 
 <footer>
@@ -141,7 +141,7 @@
 
         uploadLabel.classList.add('disabled');
         fileInput.disabled = true;
-        convertStatus.textContent = 'Converting... please wait';
+        convertStatus.textContent = '変換中...しばらくお待ちください';
         convertStatus.className = 'convert-status converting';
 
         const formData = new FormData();
@@ -165,16 +165,15 @@
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
-                convertStatus.textContent = 'Download complete!';
+                convertStatus.textContent = 'ダウンロード完了！';
                 convertStatus.className = 'convert-status success';
             } else {
-                const errorText = await response.text();
-                convertStatus.textContent = 'Server error. Please try again.';
+                convertStatus.textContent = 'サーバーエラーが発生しました。再試行してください。';
                 convertStatus.className = 'convert-status error';
             }
         } catch (error) {
             console.error('Upload error:', error);
-            convertStatus.textContent = 'Cannot connect to server. Please try later.';
+            convertStatus.textContent = 'サーバーに接続できません。後でもう一度お試しください。';
             convertStatus.className = 'convert-status error';
         } finally {
             uploadLabel.classList.remove('disabled');
@@ -183,7 +182,6 @@
         }
     });
 
-    // Guide toggle
     const guideToggle = document.getElementById('guideToggle');
     const guideContent = document.getElementById('guideContent');
     const guideArrow = document.getElementById('guideArrow');

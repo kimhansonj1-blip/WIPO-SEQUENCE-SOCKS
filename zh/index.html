@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Easily convert 1,000+ sequences to ST.26 compliant XML with just one click.">
-    <meta name="keywords" content="wiposequence, wipo sequence, WIPO sequence converter, ST.26 XML, sequence listing, patent sequence, WIPO ST.26, sequence XML converter">
+    <meta name="description" content="一键将1,000+条序列转换为符合ST.26标准的XML文件">
+    <meta name="keywords" content="wiposequence, wipo sequence, WIPO sequence converter, ST.26 XML, sequence listing, patent sequence, WIPO ST.26, 序列转换">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wiposequencesocks.com/en/">
+    <link rel="canonical" href="https://wiposequencesocks.com/zh/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta property="og:title" content="WIPO SEQUENCE SOCKS - Excel to XML">
-    <meta property="og:description" content="WIPO Sequence ST.26 XML Converter for Patent Attorneys.">
+    <meta property="og:title" content="WIPO SEQUENCE SOCKS - Excel转XML">
+    <meta property="og:description" content="专利代理人的WIPO Sequence ST.26 XML转换工具">
     <meta property="og:image" content="https://wiposequencesocks.com/logo.png">
-    <meta property="og:url" content="https://wiposequencesocks.com/en/">
+    <meta property="og:url" content="https://wiposequencesocks.com/zh/">
     <meta property="og:type" content="website">
 
     <link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/"/>
@@ -35,7 +35,7 @@
         "name": "WIPO SEQUENCE SOCKS",
         "alternateName": ["WIPO SEQUENCE SOCKS", "WIPO Sequence Converter"],
         "url": "https://wiposequencesocks.com",
-        "description": "WipoSequence: Excel to WIPO Sequence ST.26 XML converter for patent attorneys."
+        "description": "WipoSequence：专利代理人的Excel转WIPO Sequence ST.26 XML工具。"
         }
     </script>
 </head>
@@ -45,15 +45,15 @@
     <div class="header-inner">
         <div class="lang-switcher">
             <a href="https://wiposequencesocks.com/ko/" class="lang-btn">한국어</a>
-            <a href="https://wiposequencesocks.com/en/" class="lang-btn lang-active">EN</a>
+            <a href="https://wiposequencesocks.com/en/" class="lang-btn">EN</a>
             <a href="https://wiposequencesocks.com/ja/" class="lang-btn">日本語</a>
-            <a href="https://wiposequencesocks.com/zh/" class="lang-btn">中文</a>
+            <a href="https://wiposequencesocks.com/zh/" class="lang-btn lang-active">中文</a>
             <a href="https://wiposequencesocks.com/es/" class="lang-btn">ES</a>
             <a href="https://wiposequencesocks.com/fr/" class="lang-btn">FR</a>
         </div>
         <h1 class="title">WIPO SEQUENCE SOCKS</h1>
-        <p class="subtitle">Excel to WIPO Sequence XML Converter</p>
-        <p class="hero-text">Convert 1,000+ sequences to ST.26 XML in one click</p>
+        <p class="subtitle">Excel转WIPO Sequence XML转换工具</p>
+        <p class="hero-text">一键将1,000+条序列转换为ST.26 XML</p>
     </div>
 </header>
 
@@ -62,23 +62,23 @@
     <section class="actions">
 
         <div class="card">
-            <span class="card-badge download">Step 1</span>
-            <h3 class="card-title">Download Template</h3>
-            <p class="card-desc">Download the Excel template and fill in your sequence data following the included examples.</p>
+            <span class="card-badge download">步骤 1</span>
+            <h3 class="card-title">下载模板</h3>
+            <p class="card-desc">下载Excel模板，参照示例填写您的序列数据。</p>
             <div class="card-divider"></div>
             <div class="card-buttons">
-                <a href="../WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">Template (KOR)</a>
-                <a href="../WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">Template (ENG)</a>
+                <a href="../WIPO_SEQUENCE_TEMPLATE_KOR.xlsx" download class="btn btn-download">模板 (KOR)</a>
+                <a href="../WIPO_SEQUENCE_TEMPLATE_ENG.xlsx" download class="btn btn-download">模板 (ENG)</a>
             </div>
         </div>
 
         <div class="card">
-            <span class="card-badge upload">Step 2</span>
-            <h3 class="card-title">Convert to XML</h3>
-            <p class="card-desc">Upload your completed template and receive a WIPO ST.26 compatible .xml file.<br><em class="convert-note">Conversion may take 30 sec ~ 1 min</em></p>
+            <span class="card-badge upload">步骤 2</span>
+            <h3 class="card-title">转换为XML</h3>
+            <p class="card-desc">上传已完成的模板，即可获得符合WIPO ST.26标准的XML文件。<br><em class="convert-note">转换需要30秒至1分钟</em></p>
             <div class="card-divider"></div>
             <div class="card-buttons">
-                <label class="btn btn-upload" for="fileInput" id="uploadLabel">Choose File &amp; Convert</label>
+                <label class="btn btn-upload" for="fileInput" id="uploadLabel">选择文件并转换</label>
                 <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
                 <div class="convert-status" id="convertStatus"></div>
             </div>
@@ -88,40 +88,40 @@
 
     <section class="guide-section">
         <button class="guide-toggle" id="guideToggle">
-            <span>How to import into WIPO Sequence</span>
+            <span>如何导入到WIPO Sequence</span>
             <span class="guide-arrow" id="guideArrow">▼</span>
         </button>
         <div class="guide-content" id="guideContent">
             <div class="guide-steps">
                 <div class="guide-step">
                     <div class="guide-step-number">1</div>
-                    <div class="guide-step-text">Open <strong>WIPO Sequence</strong> desktop application</div>
+                    <div class="guide-step-text">打开<strong>WIPO Sequence</strong>桌面应用程序</div>
                 </div>
                 <div class="guide-step">
                     <div class="guide-step-number">2</div>
-                    <div class="guide-step-text">Click <strong>Import Sequence Listing</strong></div>
+                    <div class="guide-step-text">点击<strong>Import Sequence Listing</strong></div>
                 </div>
                 <div class="guide-step">
                     <div class="guide-step-number">3</div>
-                    <div class="guide-step-text">Click <strong>Upload</strong>, select the downloaded .xml file</div>
+                    <div class="guide-step-text">点击<strong>Upload</strong>，选择下载的.xml文件</div>
                 </div>
                 <div class="guide-step">
                     <div class="guide-step-number">4</div>
-                    <div class="guide-step-text">Enter Project Name → Click <strong>Import</strong></div>
+                    <div class="guide-step-text">输入Project Name → 点击<strong>Import</strong></div>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="report-link">
-        <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a>
+        <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">错误报告</a>
     </div>
 
 </main>
 
 <div class="disclaimer">
-    <p><strong>No Data Retention:</strong> This tool does not collect, store, or reuse any user data. All processing is transient and your information remains entirely under your control.</p>
-    <p><strong>Limitation of Liability:</strong> The creator (KangPil Kim) shall not be held liable for any direct, indirect, or consequential damages arising from use of this software. Users assume all responsibility.</p>
+    <p><strong>数据保留政策：</strong>本工具不收集、存储或重复使用任何用户数据。所有处理均为临时性的，您的信息完全在您的控制之下。</p>
+    <p><strong>免责声明：</strong>制作者（Kim KangPil）对因使用本软件而产生的任何直接、间接或后果性损害不承担责任。用户承担所有责任。</p>
 </div>
 
 <footer>
@@ -141,7 +141,7 @@
 
         uploadLabel.classList.add('disabled');
         fileInput.disabled = true;
-        convertStatus.textContent = 'Converting... please wait';
+        convertStatus.textContent = '转换中...请稍候';
         convertStatus.className = 'convert-status converting';
 
         const formData = new FormData();
@@ -165,16 +165,15 @@
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
-                convertStatus.textContent = 'Download complete!';
+                convertStatus.textContent = '下载完成！';
                 convertStatus.className = 'convert-status success';
             } else {
-                const errorText = await response.text();
-                convertStatus.textContent = 'Server error. Please try again.';
+                convertStatus.textContent = '服务器错误，请重试。';
                 convertStatus.className = 'convert-status error';
             }
         } catch (error) {
             console.error('Upload error:', error);
-            convertStatus.textContent = 'Cannot connect to server. Please try later.';
+            convertStatus.textContent = '无法连接服务器，请稍后再试。';
             convertStatus.className = 'convert-status error';
         } finally {
             uploadLabel.classList.remove('disabled');
@@ -183,7 +182,6 @@
         }
     });
 
-    // Guide toggle
     const guideToggle = document.getElementById('guideToggle');
     const guideContent = document.getElementById('guideContent');
     const guideArrow = document.getElementById('guideArrow');

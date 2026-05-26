@@ -50,7 +50,6 @@ header {
 .header-inner {
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
 }
 
 .title {
@@ -69,11 +68,11 @@ header {
 
 /* ── Language Switcher ── */
 .lang-switcher {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
-    gap: 6px;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
 }
 
 .lang-btn {
@@ -458,8 +457,6 @@ footer {
     }
 
     .lang-switcher {
-        position: static;
-        justify-content: center;
         margin-bottom: 12px;
     }
 

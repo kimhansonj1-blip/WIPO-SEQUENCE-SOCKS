@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about WIPO Sequence SOCKS converter — troubleshooting, ST.26 standard, and usage tips.">
+    <meta name="keywords" content="wiposequence FAQ, WIPO sequence help, ST.26 XML questions, sequence listing troubleshoot, patent sequence FAQ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/guide/faq/">
+    <title>FAQ - Guide - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Menu</div>
+            <a href="/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Guides</div>
+            <a href="/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> All Guides
+            </a>
+            <a href="/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> Install WIPO Sequence
+            </a>
+            <a href="/guide/excel-tips/" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Excel Template Tips
+            </a>
+            <a href="/guide/faq/" class="sidebar-link active">
+                <span class="sidebar-icon">&#10067;</span> FAQ
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Legal</div>
+            <a href="/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> Privacy Policy
+            </a>
+            <a href="/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> Terms of Service
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">FAQ</h1>
+        <p class="subtitle">Frequently Asked Questions</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/guide/">Guides</a> &rsaquo; FAQ
+    </div>
+
+    <article class="guide-article">
+
+        <h2>About the Converter</h2>
+
+        <h3>What is WIPO SEQUENCE SOCKS?</h3>
+        <p>WIPO SEQUENCE SOCKS is a free online tool that converts Excel spreadsheets containing sequence data into WIPO ST.26 compliant XML files. It is designed for patent attorneys and researchers who need to prepare sequence listings for patent applications.</p>
+
+        <h3>Is this tool free?</h3>
+        <p>Yes, it is completely free to use. No registration or login is required.</p>
+
+        <h3>Is my data safe?</h3>
+        <p>Yes. Your uploaded files are processed in memory and <strong>never stored</strong> on our servers. Once the conversion is complete and you download the XML file, all data is automatically discarded. See our <a href="/privacy/">Privacy Policy</a> for details.</p>
+
+        <h3>How many sequences can I convert at once?</h3>
+        <p>Our converter handles over 1,000 sequences in a single Excel file. For optimal performance, we recommend keeping files under 10 MB. If you have more than 5,000 sequences, consider splitting them into multiple files.</p>
+
+        <h2>About WIPO ST.26</h2>
+
+        <h3>What is WIPO ST.26?</h3>
+        <p>WIPO Standard ST.26 is the international standard for presenting nucleotide and amino acid sequence listings in patent applications. It replaced the older ST.25 standard and uses XML format instead of plain text.</p>
+
+        <h3>When did ST.26 become mandatory?</h3>
+        <p>WIPO ST.26 became the mandatory format for sequence listings in international patent applications filed on or after July 1, 2022. Most national patent offices have also adopted this standard.</p>
+
+        <h3>Do I still need WIPO Sequence software?</h3>
+        <p>Yes. After converting your Excel file to XML using our tool, you should import the XML into WIPO Sequence to validate it and make any final adjustments before submitting your patent application. See our <a href="/guide/install/">installation guide</a>.</p>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>The conversion is taking too long</h3>
+        <p>For large files (500+ sequences), conversion may take 30 seconds to 1 minute. If it takes longer than 2 minutes, try:</p>
+        <ul>
+            <li>Refreshing the page and trying again</li>
+            <li>Reducing the file size by splitting into smaller batches</li>
+            <li>Checking your internet connection</li>
+        </ul>
+
+        <h3>"Server error" message</h3>
+        <p>This usually means the Excel file format is not recognized. Make sure you:</p>
+        <ul>
+            <li>Use the official template (download from the home page)</li>
+            <li>Save the file as <code>.xlsx</code> format (not <code>.xls</code> or <code>.csv</code>)</li>
+            <li>Do not rename or remove the template's sheet names</li>
+        </ul>
+
+        <h3>"Cannot connect to server"</h3>
+        <p>Our conversion server may be temporarily unavailable. Please wait a few minutes and try again. If the problem persists, please report it via the <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a> form.</p>
+
+        <h3>The XML file won't import into WIPO Sequence</h3>
+        <p>Check the following:</p>
+        <ul>
+            <li>Ensure you're using the latest version of WIPO Sequence</li>
+            <li>Use "Import Sequence Listing" (not "Open")</li>
+            <li>Verify that your original Excel data follows the correct format (see <a href="/guide/excel-tips/">Excel Template Tips</a>)</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Still having issues?</strong> Use the <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a> form to let us know. Include a description of the problem and, if possible, a screenshot.
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

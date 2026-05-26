@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to fill in the WIPO Sequence SOCKS Excel template — sequence types, organism names, feature keys, and common mistakes to avoid.">
+    <meta name="keywords" content="wiposequence excel template, ST.26 XML excel, sequence listing template, patent sequence excel, WIPO template guide">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/guide/excel-tips/">
+    <title>Excel Template Tips - Guide - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Menu</div>
+            <a href="/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Guides</div>
+            <a href="/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> All Guides
+            </a>
+            <a href="/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> Install WIPO Sequence
+            </a>
+            <a href="/guide/excel-tips/" class="sidebar-link active">
+                <span class="sidebar-icon">&#128196;</span> Excel Template Tips
+            </a>
+            <a href="/guide/faq/" class="sidebar-link">
+                <span class="sidebar-icon">&#10067;</span> FAQ
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Legal</div>
+            <a href="/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> Privacy Policy
+            </a>
+            <a href="/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> Terms of Service
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">Excel Template Tips</h1>
+        <p class="subtitle">How to fill in the template correctly</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/guide/">Guides</a> &rsaquo; Excel Template Tips
+    </div>
+
+    <article class="guide-article">
+
+        <h2>Template Overview</h2>
+        <p>Our Excel template is designed to make it easy to input multiple sequences at once. Each row represents one sequence, and the columns capture all required ST.26 fields.</p>
+
+        <h2>Required Fields</h2>
+        <ul>
+            <li><strong>SEQ ID NO:</strong> Sequential number starting from 1 (auto-assigned if left blank)</li>
+            <li><strong>Molecule Type:</strong> DNA, RNA, or AA (amino acid)</li>
+            <li><strong>Organism Name:</strong> Scientific name of the source organism (e.g., <code>Homo sapiens</code>, <code>Mus musculus</code>)</li>
+            <li><strong>Sequence:</strong> The actual nucleotide or amino acid sequence</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Tip:</strong> Refer to the example rows included in the template. They show correctly formatted entries for DNA, RNA, and protein sequences.
+        </div>
+
+        <h2>Sequence Format Rules</h2>
+
+        <h3>DNA / RNA Sequences</h3>
+        <ul>
+            <li>Use single-letter IUPAC codes: <code>a, t, g, c</code> (DNA) or <code>a, u, g, c</code> (RNA)</li>
+            <li>Lowercase or uppercase both work (converted automatically)</li>
+            <li>Spaces, line breaks, and numbers are automatically stripped</li>
+            <li>Minimum 10 nucleotides required by WIPO ST.26 standard</li>
+        </ul>
+
+        <h3>Amino Acid Sequences</h3>
+        <ul>
+            <li>Use single-letter amino acid codes (e.g., <code>M, A, K, L</code>)</li>
+            <li>Minimum 4 amino acids required by WIPO ST.26 standard</li>
+            <li>Use <code>X</code> for unknown or unspecified amino acids</li>
+        </ul>
+
+        <div class="warn-box">
+            <strong>Common Mistake:</strong> Do not include header characters like "&gt;" (FASTA format headers) in the sequence field. Only the raw sequence characters should be entered.
+        </div>
+
+        <h2>Organism Name</h2>
+        <p>The organism name must follow NCBI taxonomy naming conventions:</p>
+        <ul>
+            <li>Use the full scientific name (e.g., <code>Homo sapiens</code>, not "Human")</li>
+            <li>For artificial/synthetic sequences, use <code>Artificial Sequence</code></li>
+            <li>For unknown organisms, use <code>Unknown</code></li>
+            <li>The name is case-sensitive as displayed but validated against NCBI taxonomy</li>
+        </ul>
+
+        <h2>Feature Annotations (Optional)</h2>
+        <p>You can add feature annotations to describe functional regions of your sequences:</p>
+        <ul>
+            <li><strong>Feature Key:</strong> e.g., <code>CDS</code>, <code>misc_feature</code>, <code>source</code></li>
+            <li><strong>Location:</strong> Position range (e.g., <code>1..300</code>)</li>
+            <li><strong>Description:</strong> Brief description of the feature</li>
+        </ul>
+
+        <h2>Tips for Large Datasets</h2>
+        <ul>
+            <li>Our converter handles 1,000+ sequences in a single file</li>
+            <li>For very large files, conversion may take up to 1-2 minutes</li>
+            <li>Keep the Excel file under 10 MB for optimal performance</li>
+            <li>If you have more than 5,000 sequences, consider splitting into multiple files</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Tip:</strong> After conversion, always validate your XML in WIPO Sequence before submitting to a patent office. The validator will catch any remaining issues.
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -100,4 +100,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/" />
   </url>
 
+  <url>
+    <loc>https://wiposequencesocks.com/guide/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://wiposequencesocks.com/guide/install/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://wiposequencesocks.com/guide/excel-tips/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://wiposequencesocks.com/guide/faq/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

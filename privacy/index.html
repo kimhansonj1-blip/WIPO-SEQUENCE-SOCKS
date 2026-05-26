@@ -15,6 +15,49 @@
 </head>
 <body>
 
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Menu</div>
+            <a href="/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Guides</div>
+            <a href="/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> All Guides
+            </a>
+            <a href="/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> Install WIPO Sequence
+            </a>
+            <a href="/guide/excel-tips/" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Excel Template Tips
+            </a>
+            <a href="/guide/faq/" class="sidebar-link">
+                <span class="sidebar-icon">&#10067;</span> FAQ
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Legal</div>
+            <a href="/privacy/" class="sidebar-link active">
+                <span class="sidebar-icon">&#128274;</span> Privacy Policy
+            </a>
+            <a href="/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> Terms of Service
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
 <header>
     <div class="header-inner">
         <div class="lang-switcher">
@@ -101,6 +144,18 @@
 <footer>
     <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
 </footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

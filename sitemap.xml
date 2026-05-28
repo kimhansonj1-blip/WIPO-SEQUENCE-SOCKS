@@ -114,200 +114,324 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Guide main -->
   <url>
     <loc>https://wiposequencesocks.com/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/" />
   </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <url>
     <loc>https://wiposequencesocks.com/ko/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/" />
   </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/ko/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/ko/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/ko/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/en/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/en/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/en/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/en/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://wiposequencesocks.com/ja/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/" />
   </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/ja/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/ja/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/ja/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://wiposequencesocks.com/zh/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/" />
   </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/zh/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/zh/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/zh/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://wiposequencesocks.com/es/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/" />
   </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/es/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/es/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://wiposequencesocks.com/es/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://wiposequencesocks.com/fr/guide/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/" />
   </url>
 
+  <!-- Guide install -->
+  <url>
+    <loc>https://wiposequencesocks.com/guide/install/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/install/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/ko/guide/install/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/install/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/ja/guide/install/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/install/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/zh/guide/install/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/install/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/es/guide/install/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/install/" />
+  </url>
   <url>
     <loc>https://wiposequencesocks.com/fr/guide/install/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/install/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/install/" />
   </url>
 
+  <!-- Guide excel-tips -->
+  <url>
+    <loc>https://wiposequencesocks.com/guide/excel-tips/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/excel-tips/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/ko/guide/excel-tips/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/excel-tips/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/ja/guide/excel-tips/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/excel-tips/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/zh/guide/excel-tips/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/excel-tips/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/es/guide/excel-tips/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/excel-tips/" />
+  </url>
   <url>
     <loc>https://wiposequencesocks.com/fr/guide/excel-tips/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/excel-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/excel-tips/" />
   </url>
 
+  <!-- Guide FAQ -->
   <url>
-    <loc>https://wiposequencesocks.com/fr/guide/faq/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://wiposequencesocks.com/guide/faq/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/ko/guide/faq/</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/ja/guide/faq/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/zh/guide/faq/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/es/guide/faq/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/" />
+  </url>
+  <url>
+    <loc>https://wiposequencesocks.com/fr/guide/faq/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/" />
   </url>
 
 </urlset>

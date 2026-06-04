@@ -239,13 +239,7 @@
                 convertStatus.textContent = 'ダウンロード完了！';
                 convertStatus.className = 'convert-status success';
             } else {
-                const errorText = await response.text();
-                if (response.status === 400) {
-                    convertStatus.textContent = errorText;
-                    convertStatus.style.whiteSpace = 'pre-line';
-                } else {
-                    convertStatus.textContent = 'サーバーエラーが発生しました。再試行してください。';
-                }
+                convertStatus.textContent = 'サーバーエラーが発生しました。再試行してください。';
                 convertStatus.className = 'convert-status error';
             }
         } catch (error) {

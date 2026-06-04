@@ -240,12 +240,7 @@
                 convertStatus.className = 'convert-status success';
             } else {
                 const errorText = await response.text();
-                if (response.status === 400) {
-                    convertStatus.textContent = errorText;
-                    convertStatus.style.whiteSpace = 'pre-line';
-                } else {
-                    convertStatus.textContent = 'Server error. Please try again.';
-                }
+                convertStatus.textContent = 'Server error. Please try again.';
                 convertStatus.className = 'convert-status error';
             }
         } catch (error) {

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about the WIPO Sequence SOCKS converter — troubleshooting, ST.26 standard, and usage tips.">
+    <meta name="keywords" content="wiposequence FAQ, WIPO sequence help, ST.26 XML questions, sequence listing troubleshooting, patent sequence FAQ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wiposequencesocks.com/en/guide/faq/">
+    <meta property="og:title" content="FAQ - Guide - WIPO SEQUENCE SOCKS">
+    <meta property="og:description" content="Frequently asked questions about the WIPO Sequence SOCKS converter — troubleshooting, ST.26 standard, and usage tips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wiposequencesocks.com/en/guide/faq/">
+    <link rel="alternate" hreflang="en" href="https://wiposequencesocks.com/en/guide/faq/">
+    <link rel="alternate" hreflang="ko" href="https://wiposequencesocks.com/ko/guide/faq/">
+    <link rel="alternate" hreflang="ja" href="https://wiposequencesocks.com/ja/guide/faq/">
+    <link rel="alternate" hreflang="zh" href="https://wiposequencesocks.com/zh/guide/faq/">
+    <link rel="alternate" hreflang="es" href="https://wiposequencesocks.com/es/guide/faq/">
+    <link rel="alternate" hreflang="fr" href="https://wiposequencesocks.com/fr/guide/faq/">
+    <link rel="alternate" hreflang="x-default" href="https://wiposequencesocks.com/guide/faq/">
+    <title>FAQ - Guide - WIPO SEQUENCE SOCKS</title>
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+    <link rel="stylesheet" href="../../../css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2236588902510681" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSF0EL0NKS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MSF0EL0NKS');
+    </script>
+</head>
+<body>
+
+<!-- Sidebar Toggle -->
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">WIPO SEQUENCE SOCKS</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Menu</div>
+            <a href="/en/" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Guides</div>
+            <a href="/en/guide/" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> All Guides
+            </a>
+            <a href="/en/guide/install/" class="sidebar-link">
+                <span class="sidebar-icon">&#128187;</span> Install WIPO Sequence
+            </a>
+            <a href="/en/guide/excel-tips/" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Excel Template Tips
+            </a>
+            <a href="/en/guide/faq/" class="sidebar-link active">
+                <span class="sidebar-icon">&#10067;</span> FAQ
+            </a>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Legal</div>
+            <a href="/privacy/" class="sidebar-link">
+                <span class="sidebar-icon">&#128274;</span> Privacy Policy
+            </a>
+            <a href="/terms/" class="sidebar-link">
+                <span class="sidebar-icon">&#128220;</span> Terms of Service
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-footer">&copy; 2026 KangPil Kim</div>
+</nav>
+
+<header>
+    <div class="header-inner">
+        <h1 class="title">Frequently Asked Questions</h1>
+        <p class="subtitle">FAQ</p>
+    </div>
+</header>
+
+<main>
+    <div class="guide-breadcrumb">
+        <a href="/en/guide/">Guides</a> &rsaquo; FAQ
+    </div>
+
+    <article class="guide-article">
+
+        <h2>About the Converter</h2>
+
+        <h3>What is WIPO SEQUENCE SOCKS?</h3>
+        <p>WIPO SEQUENCE SOCKS is a free online tool that converts Excel spreadsheets containing sequence data into WIPO ST.26 compliant XML files. It is designed for patent attorneys and researchers who need to prepare sequence listings for patent applications.</p>
+
+        <h3>Is this tool free?</h3>
+        <p>Yes, it is completely free to use. No registration or login is required.</p>
+
+        <h3>Is my data safe?</h3>
+        <p>Yes. Uploaded files are processed in memory only and are <strong>not stored</strong> on the server. Once the conversion is complete and you download the XML file, all data is automatically discarded. See our <a href="/privacy/">Privacy Policy</a> for details.</p>
+
+        <h3>How many sequences can I convert at once?</h3>
+        <p>The converter can handle 1,000+ sequences in a single Excel file. For best performance, we recommend keeping the file size under 10 MB. If you have more than 5,000 sequences, consider splitting them into multiple files.</p>
+
+        <h2>About WIPO ST.26</h2>
+
+        <h3>What is WIPO ST.26?</h3>
+        <p>WIPO Standard ST.26 is the international standard for representing nucleotide and amino acid sequence listings in patent applications. It replaced the previous ST.25 standard and uses XML format instead of plain text.</p>
+
+        <h3>When did ST.26 become mandatory?</h3>
+        <p>WIPO ST.26 became the mandatory format for sequence listings in international patent applications filed on or after July 1, 2022. Most national patent offices have also adopted this standard.</p>
+
+        <h3>Do I still need WIPO Sequence software?</h3>
+        <p>Yes. Even after using this tool to convert your Excel file to XML, you still need to import the XML into WIPO Sequence for validation and final adjustments before filing. See the <a href="/en/guide/install/">installation guide</a> for details.</p>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>The conversion is taking too long</h3>
+        <p>For large files (500+ sequences), conversion may take 30 seconds to 1 minute. If it takes longer than 2 minutes, try the following:</p>
+        <ul>
+            <li>Refresh the page and try again</li>
+            <li>Split the file into smaller batches</li>
+            <li>Check your internet connection</li>
+        </ul>
+
+        <h3>I see a "Server error" message</h3>
+        <p>This usually occurs when the Excel file format is not recognized. Please check:</p>
+        <ul>
+            <li>Use the official template downloaded from the home page</li>
+            <li>Save the file in <code>.xlsx</code> format (<code>.xls</code> or <code>.csv</code> are not supported)</li>
+            <li>Make sure you have not renamed or deleted the sheet tabs in the template</li>
+        </ul>
+
+        <h3>"Cannot connect to server"</h3>
+        <p>The conversion server may be temporarily unavailable. Please wait a moment and try again. If the problem persists, let us know via the <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">error report</a> form.</p>
+
+        <h3>I cannot import the XML into WIPO Sequence</h3>
+        <p>Please check the following:</p>
+        <ul>
+            <li>Use the latest version of WIPO Sequence</li>
+            <li>Use "Import Sequence Listing" instead of "Open"</li>
+            <li>Verify that the original Excel data follows the correct format (see <a href="/en/guide/excel-tips/">Excel Template Tips</a>)</li>
+        </ul>
+
+        <div class="tip-box">
+            <strong>Still having issues?</strong> Use the <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">error report</a> form to let us know. Please include a description of the problem and a screenshot if possible.
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 KangPil Kim. All rights reserved.</p>
+</footer>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    function openSidebar() { sidebar.classList.add('open'); sidebarOverlay.classList.add('open'); }
+    function closeSidebar() { sidebar.classList.remove('open'); sidebarOverlay.classList.remove('open'); }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+</script>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1077ca30080842d6b717eab9348c1dab"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

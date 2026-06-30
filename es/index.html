@@ -231,14 +231,23 @@
       errorLog.classList.remove('show');
       errorLogContent.classList.remove('open');
     }
-    function showErrorLog(msg){
+    function showErrorLog(groups){
       clearErrorLog();
-      var parts = String(msg).split('\n').filter(function(s){ return s.trim() !== ''; });
-      for(var i=0;i<parts.length;i++){
-        var cell = document.createElement('span');
-        cell.className = 'error-log-item';
-        cell.textContent = parts[i];
-        errorLogItems.appendChild(cell);
+      if(!groups || !groups.length) return;
+      for(var i=0;i<groups.length;i++){
+        var item = document.createElement('div');
+        item.className = 'error-log-item';
+        if(groups[i].head){
+          var h = document.createElement('div');
+          h.className = 'error-log-row';
+          h.textContent = groups[i].head;
+          item.appendChild(h);
+        }
+        var d = document.createElement('div');
+        d.className = 'error-log-detail';
+        d.textContent = groups[i].detail;
+        item.appendChild(d);
+        errorLogItems.appendChild(item);
       }
       errorLog.classList.add('show');
       errorLogContent.classList.add('open');
@@ -248,6 +257,8 @@
     var ERR_I18N = {
       fields: { moltype:'Tipo de molécula', details:'Tipo detallado', sequence:'Secuencia', organism:'Organismo' },
       emptyField: function(row, f){ return 'Fila '+row+': '+f+' está vacío.'; },
+      rowLabel: function(row){ return 'Fila '+row; },
+      fieldEmpty: function(f){ return f+' está vacío.'; },
       NO_DATA: 'No se encontraron datos de secuencia. Complete al menos una fila.',
       NO_FILE: 'No se adjuntó ningún archivo. Seleccione un archivo Excel para convertir.',
       GENERIC: 'Se produjo un error durante la conversión. Inténtelo de nuevo más tarde.',
@@ -266,6 +277,26 @@
         out.push(m);
       }
       return out.length ? out.join('\n') : null;
+    }
+
+    function buildErrGroups(data){
+      if(!data || !Array.isArray(data.errors)) return null;
+      var byRow={}, order=[], others=[];
+      for(var i=0;i<data.errors.length;i++){
+        var e=data.errors[i];
+        if(e.code==='EMPTY_FIELD'){
+          var r=e.row;
+          if(!(r in byRow)){ byRow[r]=[]; order.push(r); }
+          byRow[r].push(ERR_I18N.fieldEmpty(ERR_I18N.fields[e.field]||e.field));
+        } else if(e.code==='NO_DATA'){ others.push(ERR_I18N.NO_DATA); }
+        else if(e.code==='NO_FILE'){ others.push(ERR_I18N.NO_FILE); }
+        else if(e.code==='GENERIC'){ others.push(ERR_I18N.GENERIC); }
+        else { others.push(e.code); }
+      }
+      var groups=[];
+      for(var j=0;j<order.length;j++){ groups.push({ head:ERR_I18N.rowLabel(order[j]), detail:byRow[order[j]].join(' ') }); }
+      for(var k=0;k<others.length;k++){ groups.push({ head:'', detail:others[k] }); }
+      return groups.length ? groups : null;
     }
 
     function showErrorPopup(message) {
@@ -327,12 +358,12 @@
                 convertStatus.textContent = '¡Descarga completada!';
                 convertStatus.className = 'convert-status success';
                         } else {
-                let msg = null;
-                try { msg = buildErrMsg(await response.json()); } catch (_e) {}
-                if (!msg) msg = ERR_I18N.GENERIC;
+                let data = null;
+                try { data = await response.json(); } catch (_e) {}
+                var msg = buildErrMsg(data) || ERR_I18N.GENERIC;
                 convertStatus.textContent = '';
                 convertStatus.className = 'convert-status';
-                showErrorLog(msg);
+                showErrorLog(buildErrGroups(data) || [{head:'', detail: msg}]);
                 showErrorPopup(msg);
             }
                 } catch (error) {
@@ -340,7 +371,7 @@
             var msg = ERR_I18N.NETWORK;
             convertStatus.textContent = '';
             convertStatus.className = 'convert-status';
-            showErrorLog(msg);
+            showErrorLog([{head:'', detail: msg}]);
             showErrorPopup(msg);
         } finally {
             uploadLabel.classList.remove('disabled');

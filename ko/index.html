@@ -231,14 +231,23 @@
       errorLog.classList.remove('show');
       errorLogContent.classList.remove('open');
     }
-    function showErrorLog(msg){
+    function showErrorLog(groups){
       clearErrorLog();
-      var parts = String(msg).split('\n').filter(function(s){ return s.trim() !== ''; });
-      for(var i=0;i<parts.length;i++){
-        var cell = document.createElement('span');
-        cell.className = 'error-log-item';
-        cell.textContent = parts[i];
-        errorLogItems.appendChild(cell);
+      if(!groups || !groups.length) return;
+      for(var i=0;i<groups.length;i++){
+        var item = document.createElement('div');
+        item.className = 'error-log-item';
+        if(groups[i].head){
+          var h = document.createElement('div');
+          h.className = 'error-log-row';
+          h.textContent = groups[i].head;
+          item.appendChild(h);
+        }
+        var d = document.createElement('div');
+        d.className = 'error-log-detail';
+        d.textContent = groups[i].detail;
+        item.appendChild(d);
+        errorLogItems.appendChild(item);
       }
       errorLog.classList.add('show');
       errorLogContent.classList.add('open');
@@ -249,6 +258,8 @@
     var ERR_I18N = {
       fields: { moltype:'종류', details:'세부 종류', sequence:'서열', organism:'생물명' },
       emptyField: function(row, f){ return row+'번 행: '+f+'이(가) 비어 있습니다.'; },
+      rowLabel: function(row){ return row+'번 행'; },
+      fieldEmpty: function(f){ var c=f.charCodeAt(f.length-1); var j=(c>=0xAC00&&c<=0xD7A3&&(c-0xAC00)%28===0)?'가':'이'; return f+j+' 비어 있습니다.'; },
       NO_DATA: '서열 데이터가 없습니다. 최소 한 행 이상 입력하세요.',
       NO_FILE: '파일이 첨부되지 않았습니다. 변환할 엑셀 파일을 선택해 주세요.',
       GENERIC: '변환 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.',
@@ -267,6 +278,26 @@
         out.push(m);
       }
       return out.length ? out.join('\n') : null;
+    }
+
+    function buildErrGroups(data){
+      if(!data || !Array.isArray(data.errors)) return null;
+      var byRow={}, order=[], others=[];
+      for(var i=0;i<data.errors.length;i++){
+        var e=data.errors[i];
+        if(e.code==='EMPTY_FIELD'){
+          var r=e.row;
+          if(!(r in byRow)){ byRow[r]=[]; order.push(r); }
+          byRow[r].push(ERR_I18N.fieldEmpty(ERR_I18N.fields[e.field]||e.field));
+        } else if(e.code==='NO_DATA'){ others.push(ERR_I18N.NO_DATA); }
+        else if(e.code==='NO_FILE'){ others.push(ERR_I18N.NO_FILE); }
+        else if(e.code==='GENERIC'){ others.push(ERR_I18N.GENERIC); }
+        else { others.push(e.code); }
+      }
+      var groups=[];
+      for(var j=0;j<order.length;j++){ groups.push({ head:ERR_I18N.rowLabel(order[j]), detail:byRow[order[j]].join(' ') }); }
+      for(var k=0;k<others.length;k++){ groups.push({ head:'', detail:others[k] }); }
+      return groups.length ? groups : null;
     }
 
     function showErrorPopup(message) {
@@ -328,12 +359,12 @@
                 convertStatus.textContent = '다운로드 완료!';
                 convertStatus.className = 'convert-status success';
                         } else {
-                let msg = null;
-                try { msg = buildErrMsg(await response.json()); } catch (_e) {}
-                if (!msg) msg = ERR_I18N.GENERIC;
+                let data = null;
+                try { data = await response.json(); } catch (_e) {}
+                var msg = buildErrMsg(data) || ERR_I18N.GENERIC;
                 convertStatus.textContent = '';
                 convertStatus.className = 'convert-status';
-                showErrorLog(msg);
+                showErrorLog(buildErrGroups(data) || [{head:'', detail: msg}]);
                 showErrorPopup(msg);
             }
                 } catch (error) {
@@ -341,7 +372,7 @@
             var msg = ERR_I18N.NETWORK;
             convertStatus.textContent = '';
             convertStatus.className = 'convert-status';
-            showErrorLog(msg);
+            showErrorLog([{head:'', detail: msg}]);
             showErrorPopup(msg);
         } finally {
             uploadLabel.classList.remove('disabled');

@@ -253,20 +253,30 @@ main {
 
 .error-log-items {
     padding: 0 24px 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .error-log-item {
+    padding-left: 12px;
+    border-left: 2px solid #FCA5A5;
+}
+
+.error-log-row {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+}
+
+.error-log-detail {
     font-size: 0.8rem;
     font-weight: 500;
     color: #B91C1C;
     line-height: 1.5;
     white-space: pre-line;
     word-break: break-word;
-    padding-left: 12px;
-    border-left: 2px solid #FCA5A5;
 }
 
 .btn-upload.disabled {

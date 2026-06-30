@@ -184,7 +184,10 @@
         </div>
     </section>
 
-    <div class="error-log" id="errorLog" aria-live="polite"></div>
+    <div class="error-log" id="errorLog" aria-live="polite">
+        <div class="error-log-title">错误日志</div>
+        <div class="error-log-grid" id="errorLogGrid"></div>
+    </div>
 
     <div class="report-link">
         <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">错误报告</a>
@@ -207,6 +210,22 @@
     const uploadLabel = document.getElementById('uploadLabel');
     const convertStatus = document.getElementById('convertStatus');
     const errorLog = document.getElementById('errorLog');
+    const errorLogGrid = document.getElementById('errorLogGrid');
+    function showErrorLog(msg){
+      errorLogGrid.innerHTML = '';
+      var items = String(msg).split('\n').filter(function(s){ return s.trim() !== ''; });
+      for(var i=0;i<items.length;i++){
+        var cell = document.createElement('div');
+        cell.className = 'error-log-item';
+        cell.textContent = items[i];
+        errorLogGrid.appendChild(cell);
+      }
+      errorLog.classList.add('show');
+    }
+    function clearErrorLog(){
+      errorLogGrid.innerHTML = '';
+      errorLog.classList.remove('show');
+    }
 
     // 변환 오류 팝업 (2026-06-30 마스터) — 구체적 오류 메시지를 모달로 안내(언어중립: 아이콘+메시지).
     var ERR_I18N = {
@@ -264,8 +283,7 @@
         fileInput.disabled = true;
         convertStatus.textContent = '转换中...请稍候';
         convertStatus.className = 'convert-status converting';
-        errorLog.textContent = '';
-        errorLog.className = 'error-log';
+        clearErrorLog();
 
         const formData = new FormData();
         formData.append('excel_file', file);
@@ -296,8 +314,7 @@
                 if (!msg) msg = ERR_I18N.GENERIC;
                 convertStatus.textContent = '';
                 convertStatus.className = 'convert-status';
-                errorLog.textContent = msg;
-                errorLog.className = 'error-log show';
+                showErrorLog(msg);
                 showErrorPopup(msg);
             }
                 } catch (error) {
@@ -305,8 +322,7 @@
             var msg = ERR_I18N.NETWORK;
             convertStatus.textContent = '';
             convertStatus.className = 'convert-status';
-            errorLog.textContent = msg;
-            errorLog.className = 'error-log show';
+            showErrorLog(msg);
             showErrorPopup(msg);
         } finally {
             uploadLabel.classList.remove('disabled');

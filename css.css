@@ -201,21 +201,37 @@ main {
 
 .error-log {
     margin-top: 16px;
-    padding: 14px 18px;
-    background: #FEF2F2;
-    border: 1px solid #FCA5A5;
+    padding: 18px 22px;
+    background: white;
+    border: 1px solid var(--border);
     border-radius: 14px;
-    color: #B91C1C;
-    font-size: 0.82rem;
-    font-weight: 600;
-    line-height: 1.55;
-    white-space: pre-line;
-    word-break: break-word;
-    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 .error-log:not(.show) {
     display: none;
+}
+
+.error-log-title {
+    color: #B91C1C;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.error-log-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+}
+
+.error-log-item {
+    color: #B91C1C;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: pre-line;
+    word-break: break-word;
 }
 
 .btn-upload.disabled {

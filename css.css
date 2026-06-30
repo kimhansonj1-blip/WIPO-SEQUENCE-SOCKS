@@ -208,31 +208,54 @@ main {
     color: #EF4444;
 }
 
-.error-log {
-    width: 100%;
+.error-log-section {
     margin-top: 16px;
-    padding: 16px 24px;
     background: white;
     border: 1px solid var(--border);
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-    cursor: pointer;
-    text-align: left;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
-    align-items: start;
+    overflow: hidden;
 }
 
-.error-log:not(.show) {
+.error-log-section:not(.show) {
     display: none;
 }
 
-.error-log-title {
-    grid-column: 1 / -1;
+.error-log-toggle {
+    width: 100%;
+    padding: 16px 24px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: background 0.15s;
+    text-align: left;
+}
+
+.error-log-toggle:hover {
+    background: var(--bg);
+}
+
+.error-log-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.error-log-content.open {
+    max-height: 600px;
+}
+
+.error-log-items {
+    padding: 0 24px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
 }
 
 .error-log-item {

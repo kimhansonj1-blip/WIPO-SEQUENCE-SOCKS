@@ -199,9 +199,14 @@
         </div>
     </section>
 
-    <button class="error-log" id="errorLog" aria-live="polite" open>
-        <span class="error-log-title">Error Log</span>
-    </button>
+    <div class="error-log-section" id="errorLog" aria-live="polite">
+        <button class="error-log-toggle" id="errorLogToggle" type="button">
+            <span class="error-log-title">Error Log</span>
+        </button>
+        <div class="error-log-content" id="errorLogContent">
+            <div class="error-log-items" id="errorLogItems"></div>
+        </div>
+    </div>
 
     <div class="report-link">
         <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">Error Report</a>
@@ -224,11 +229,19 @@
     const uploadLabel = document.getElementById('uploadLabel');
     const convertStatus = document.getElementById('convertStatus');
     const errorLog = document.getElementById('errorLog');
+    const errorLogItems = document.getElementById('errorLogItems');
+    const errorLogToggle = document.getElementById('errorLogToggle');
+    const errorLogContent = document.getElementById('errorLogContent');
     const convertSpinner = document.getElementById('convertSpinner');
+    if (errorLogToggle) {
+      errorLogToggle.addEventListener('click', function(){
+        errorLogContent.classList.toggle('open');
+      });
+    }
     function clearErrorLog(){
-      var existing = errorLog.querySelectorAll('.error-log-item');
-      for(var i=0;i<existing.length;i++){ existing[i].remove(); }
+      errorLogItems.innerHTML = '';
       errorLog.classList.remove('show');
+      errorLogContent.classList.remove('open');
     }
     function showErrorLog(msg){
       clearErrorLog();
@@ -237,9 +250,10 @@
         var cell = document.createElement('span');
         cell.className = 'error-log-item';
         cell.textContent = parts[i];
-        errorLog.appendChild(cell);
+        errorLogItems.appendChild(cell);
       }
       errorLog.classList.add('show');
+      errorLogContent.classList.add('open');
     }
 
     // 변환 오류 팝업 (2026-06-30 마스터) — 구체적 오류 메시지를 모달로 안내(언어중립: 아이콘+메시지).

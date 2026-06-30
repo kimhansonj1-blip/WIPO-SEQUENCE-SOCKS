@@ -205,6 +205,53 @@
     const uploadLabel = document.getElementById('uploadLabel');
     const convertStatus = document.getElementById('convertStatus');
 
+    // 변환 오류 팝업 (2026-06-30 마스터) — 구체적 오류 메시지를 모달로 안내(언어중립: 아이콘+메시지).
+    var ERR_I18N = {
+      fields: { moltype:'分子类型', details:'详细类型', sequence:'序列', organism:'生物名称' },
+      emptyField: function(row, f){ return '第'+row+'行：'+f+'为空。'; },
+      NO_DATA: '未找到序列数据。请至少填写一行。',
+      NO_FILE: '未附加文件。请选择要转换的Excel文件。',
+      GENERIC: '转换过程中发生错误。请稍后重试。',
+      NETWORK: '无法连接到服务器。请稍后重试。'
+    };
+    function buildErrMsg(data){
+      if(!data || !Array.isArray(data.errors)) return null;
+      var out=[];
+      for(var i=0;i<data.errors.length;i++){
+        var e=data.errors[i], m;
+        if(e.code==='EMPTY_FIELD') m=ERR_I18N.emptyField(e.row, (ERR_I18N.fields[e.field]||e.field));
+        else if(e.code==='NO_DATA') m=ERR_I18N.NO_DATA;
+        else if(e.code==='NO_FILE') m=ERR_I18N.NO_FILE;
+        else if(e.code==='GENERIC') m=ERR_I18N.GENERIC;
+        else m=e.code;
+        out.push(m);
+      }
+      return out.length ? out.join('\n') : null;
+    }
+
+    function showErrorPopup(message) {
+      if (!message) return;
+      var old = document.getElementById('seqErrOverlay'); if (old) old.remove();
+      var ov = document.createElement('div'); ov.id = 'seqErrOverlay';
+      ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:99999;padding:20px;';
+      var box = document.createElement('div');
+      box.style.cssText = 'position:relative;background:#fff;max-width:440px;width:100%;border-radius:14px;padding:24px 22px 20px;box-shadow:0 12px 40px rgba(0,0,0,.28);';
+      var head = document.createElement('div');
+      head.style.cssText = 'font-size:34px;line-height:1;margin-bottom:12px;text-align:center;';
+      head.textContent = '\u26A0\uFE0F';
+      var body = document.createElement('div');
+      body.style.cssText = 'font-size:15px;color:#222;white-space:pre-line;word-break:break-word;text-align:center;line-height:1.55;';
+      body.textContent = message;
+      var btn = document.createElement('button');
+      btn.textContent = '\u2715'; btn.setAttribute('aria-label','close');
+      btn.style.cssText = 'position:absolute;top:12px;right:16px;border:none;background:transparent;font-size:22px;color:#888;cursor:pointer;';
+      function close(){ ov.remove(); }
+      btn.onclick = close;
+      ov.addEventListener('click', function(e){ if (e.target === ov) close(); });
+      document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ close(); document.removeEventListener('keydown', esc);} });
+      box.appendChild(btn); box.appendChild(head); box.appendChild(body); ov.appendChild(box); document.body.appendChild(ov);
+    }
+
     fileInput.addEventListener('change', async () => {
         if (fileInput.files.length === 0) return;
 
@@ -238,14 +285,19 @@
                 a.remove();
                 convertStatus.textContent = '下载完成！';
                 convertStatus.className = 'convert-status success';
-            } else {
-                convertStatus.textContent = '服务器错误，请重试。';
-                convertStatus.className = 'convert-status error';
+                        } else {
+                let msg = null;
+                try { msg = buildErrMsg(await response.json()); } catch (_e) {}
+                if (!msg) msg = ERR_I18N.GENERIC;
+                convertStatus.textContent = msg;
+                convertStatus.style.whiteSpace = 'pre-line';
+                convertStatus.className = 'convert-status error'; showErrorPopup(msg);
             }
-        } catch (error) {
+                } catch (error) {
             console.error('Upload error:', error);
-            convertStatus.textContent = '无法连接服务器，请稍后再试。';
-            convertStatus.className = 'convert-status error';
+            var msg = ERR_I18N.NETWORK;
+            convertStatus.textContent = msg;
+            convertStatus.className = 'convert-status error'; showErrorPopup(msg);
         } finally {
             uploadLabel.classList.remove('disabled');
             fileInput.disabled = false;

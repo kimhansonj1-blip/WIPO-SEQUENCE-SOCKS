@@ -205,6 +205,54 @@
     const uploadLabel = document.getElementById('uploadLabel');
     const convertStatus = document.getElementById('convertStatus');
 
+    // 변환 오류 팝업 (2026-06-30 마스터) — 구체적 오류 메시지를 모달로 안내(언어중립: 아이콘+메시지).
+    // 변환 오류 다국어 사전 (2026-06-30 마스터 A안) — 백엔드 에러코드를 이 언어로 조립.
+    var ERR_I18N = {
+      fields: { moltype:'종류', details:'세부 종류', sequence:'서열', organism:'생물명' },
+      emptyField: function(row, f){ return row+'번 행: '+f+'이(가) 비어 있습니다.'; },
+      NO_DATA: '서열 데이터가 없습니다. 최소 한 행 이상 입력하세요.',
+      NO_FILE: '파일이 첨부되지 않았습니다. 변환할 엑셀 파일을 선택해 주세요.',
+      GENERIC: '변환 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.',
+      NETWORK: '서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.'
+    };
+    function buildErrMsg(data){
+      if(!data || !Array.isArray(data.errors)) return null;
+      var out=[];
+      for(var i=0;i<data.errors.length;i++){
+        var e=data.errors[i], m;
+        if(e.code==='EMPTY_FIELD') m=ERR_I18N.emptyField(e.row, (ERR_I18N.fields[e.field]||e.field));
+        else if(e.code==='NO_DATA') m=ERR_I18N.NO_DATA;
+        else if(e.code==='NO_FILE') m=ERR_I18N.NO_FILE;
+        else if(e.code==='GENERIC') m=ERR_I18N.GENERIC;
+        else m=e.code;
+        out.push(m);
+      }
+      return out.length ? out.join('\n') : null;
+    }
+
+    function showErrorPopup(message) {
+      if (!message) return;
+      var old = document.getElementById('seqErrOverlay'); if (old) old.remove();
+      var ov = document.createElement('div'); ov.id = 'seqErrOverlay';
+      ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:99999;padding:20px;';
+      var box = document.createElement('div');
+      box.style.cssText = 'position:relative;background:#fff;max-width:440px;width:100%;border-radius:14px;padding:24px 22px 20px;box-shadow:0 12px 40px rgba(0,0,0,.28);';
+      var head = document.createElement('div');
+      head.style.cssText = 'font-size:34px;line-height:1;margin-bottom:12px;text-align:center;';
+      head.textContent = '\u26A0\uFE0F';
+      var body = document.createElement('div');
+      body.style.cssText = 'font-size:15px;color:#222;white-space:pre-line;word-break:break-word;text-align:center;line-height:1.55;';
+      body.textContent = message;
+      var btn = document.createElement('button');
+      btn.textContent = '\u2715'; btn.setAttribute('aria-label','close');
+      btn.style.cssText = 'position:absolute;top:12px;right:16px;border:none;background:transparent;font-size:22px;color:#888;cursor:pointer;';
+      function close(){ ov.remove(); }
+      btn.onclick = close;
+      ov.addEventListener('click', function(e){ if (e.target === ov) close(); });
+      document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ close(); document.removeEventListener('keydown', esc);} });
+      box.appendChild(btn); box.appendChild(head); box.appendChild(body); ov.appendChild(box); document.body.appendChild(ov);
+    }
+
     fileInput.addEventListener('change', async () => {
         if (fileInput.files.length === 0) return;
 
@@ -238,15 +286,19 @@
                 a.remove();
                 convertStatus.textContent = '다운로드 완료!';
                 convertStatus.className = 'convert-status success';
-            } else {
-                const errorText = await response.text();
-                convertStatus.textContent = '서버 오류가 발생했습니다. 다시 시도해주세요.';
-                convertStatus.className = 'convert-status error';
+                        } else {
+                let msg = null;
+                try { msg = buildErrMsg(await response.json()); } catch (_e) {}
+                if (!msg) msg = ERR_I18N.GENERIC;
+                convertStatus.textContent = msg;
+                convertStatus.style.whiteSpace = 'pre-line';
+                convertStatus.className = 'convert-status error'; showErrorPopup(msg);
             }
-        } catch (error) {
+                } catch (error) {
             console.error('Upload error:', error);
-            convertStatus.textContent = '서버에 연결할 수 없습니다. 잠시 후 다시 시도해주세요.';
-            convertStatus.className = 'convert-status error';
+            var msg = ERR_I18N.NETWORK;
+            convertStatus.textContent = msg;
+            convertStatus.className = 'convert-status error'; showErrorPopup(msg);
         } finally {
             uploadLabel.classList.remove('disabled');
             fileInput.disabled = false;

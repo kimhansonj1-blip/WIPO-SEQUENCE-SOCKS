@@ -184,6 +184,8 @@
         </div>
     </section>
 
+    <div class="error-log" id="errorLog" aria-live="polite"></div>
+
     <div class="report-link">
         <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">错误报告</a>
     </div>
@@ -204,6 +206,7 @@
     const fileInput = document.getElementById('fileInput');
     const uploadLabel = document.getElementById('uploadLabel');
     const convertStatus = document.getElementById('convertStatus');
+    const errorLog = document.getElementById('errorLog');
 
     // 변환 오류 팝업 (2026-06-30 마스터) — 구체적 오류 메시지를 모달로 안내(언어중립: 아이콘+메시지).
     var ERR_I18N = {
@@ -261,6 +264,8 @@
         fileInput.disabled = true;
         convertStatus.textContent = '转换中...请稍候';
         convertStatus.className = 'convert-status converting';
+        errorLog.textContent = '';
+        errorLog.className = 'error-log';
 
         const formData = new FormData();
         formData.append('excel_file', file);
@@ -289,15 +294,20 @@
                 let msg = null;
                 try { msg = buildErrMsg(await response.json()); } catch (_e) {}
                 if (!msg) msg = ERR_I18N.GENERIC;
-                convertStatus.textContent = msg;
-                convertStatus.style.whiteSpace = 'pre-line';
-                convertStatus.className = 'convert-status error'; showErrorPopup(msg);
+                convertStatus.textContent = '';
+                convertStatus.className = 'convert-status';
+                errorLog.textContent = msg;
+                errorLog.className = 'error-log show';
+                showErrorPopup(msg);
             }
                 } catch (error) {
             console.error('Upload error:', error);
             var msg = ERR_I18N.NETWORK;
-            convertStatus.textContent = msg;
-            convertStatus.className = 'convert-status error'; showErrorPopup(msg);
+            convertStatus.textContent = '';
+            convertStatus.className = 'convert-status';
+            errorLog.textContent = msg;
+            errorLog.className = 'error-log show';
+            showErrorPopup(msg);
         } finally {
             uploadLabel.classList.remove('disabled');
             fileInput.disabled = false;

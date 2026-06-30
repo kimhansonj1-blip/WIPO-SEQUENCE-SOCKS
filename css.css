@@ -199,6 +199,25 @@ main {
     color: #EF4444;
 }
 
+.error-log {
+    margin-top: 16px;
+    padding: 14px 18px;
+    background: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 14px;
+    color: #B91C1C;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.55;
+    white-space: pre-line;
+    word-break: break-word;
+    text-align: left;
+}
+
+.error-log:not(.show) {
+    display: none;
+}
+
 .btn-upload.disabled {
     opacity: 0.6;
     cursor: not-allowed;

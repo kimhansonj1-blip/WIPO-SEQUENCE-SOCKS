@@ -151,7 +151,10 @@
             <div class="card-buttons">
                 <label class="btn btn-upload" for="fileInput" id="uploadLabel">ファイルを選択＆変換</label>
                 <input type="file" accept=".xlsx" class="file-hidden" id="fileInput">
-                <div class="convert-status" id="convertStatus"></div>
+                <div class="convert-status-row">
+                  <span class="convert-spinner" id="convertSpinner"></span>
+                  <div class="convert-status" id="convertStatus"></div>
+                </div>
             </div>
         </div>
 
@@ -184,10 +187,9 @@
         </div>
     </section>
 
-    <div class="error-log" id="errorLog" aria-live="polite">
-        <div class="error-log-title">エラーログ</div>
-        <div class="error-log-grid" id="errorLogGrid"></div>
-    </div>
+    <button class="error-log" id="errorLog" aria-live="polite" open>
+        <span class="error-log-title">エラーログ</span>
+    </button>
 
     <div class="report-link">
         <a href="https://forms.gle/nB92mwg2PJgb4y1D7" target="_blank">エラー報告</a>
@@ -210,21 +212,22 @@
     const uploadLabel = document.getElementById('uploadLabel');
     const convertStatus = document.getElementById('convertStatus');
     const errorLog = document.getElementById('errorLog');
-    const errorLogGrid = document.getElementById('errorLogGrid');
+    const convertSpinner = document.getElementById('convertSpinner');
+    function clearErrorLog(){
+      var existing = errorLog.querySelectorAll('.error-log-item');
+      for(var i=0;i<existing.length;i++){ existing[i].remove(); }
+      errorLog.classList.remove('show');
+    }
     function showErrorLog(msg){
-      errorLogGrid.innerHTML = '';
-      var items = String(msg).split('\n').filter(function(s){ return s.trim() !== ''; });
-      for(var i=0;i<items.length;i++){
-        var cell = document.createElement('div');
+      clearErrorLog();
+      var parts = String(msg).split('\n').filter(function(s){ return s.trim() !== ''; });
+      for(var i=0;i<parts.length;i++){
+        var cell = document.createElement('span');
         cell.className = 'error-log-item';
-        cell.textContent = items[i];
-        errorLogGrid.appendChild(cell);
+        cell.textContent = parts[i];
+        errorLog.appendChild(cell);
       }
       errorLog.classList.add('show');
-    }
-    function clearErrorLog(){
-      errorLogGrid.innerHTML = '';
-      errorLog.classList.remove('show');
     }
 
     // 변환 오류 팝업 (2026-06-30 마스터) — 구체적 오류 메시지를 모달로 안내(언어중립: 아이콘+메시지).
@@ -284,6 +287,7 @@
         convertStatus.textContent = '変換中...しばらくお待ちください';
         convertStatus.className = 'convert-status converting';
         clearErrorLog();
+        convertSpinner.classList.add('show');
 
         const formData = new FormData();
         formData.append('excel_file', file);
@@ -328,6 +332,7 @@
             uploadLabel.classList.remove('disabled');
             fileInput.disabled = false;
             fileInput.value = '';
+            convertSpinner.classList.remove('show');
         }
     });
 
